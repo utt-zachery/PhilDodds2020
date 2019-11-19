@@ -1,15 +1,14 @@
 
 <style>
-
 div.tile3 {
-
+  z-index: -10;
     background-image: url("Phil03.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 20% 20%;
 }
 div.tile2 {
-
+  z-index: -10;
     background-image: url("Phil02.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -17,7 +16,7 @@ div.tile2 {
 }
 
 div.tile1 {
-
+  z-index: -10;
     background-image: url("Phil01.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -64,17 +63,19 @@ img.logOverlay {
   display: block;
     position: absolute; 
 	left: calc((25% - 100px) - ((400px - 250px) / 2)); 
-	bottom: 40%; 
+	bottom: calc((100% - 289px) / 2); 
 	width:400px;
   }
   
- 
+
+	
 @media only screen and (max-width: 1300px) 
 	{
 		img.logOverlay {
-			left: calc((25% - 100px) - ((30% - 250px) / 2)); 
-			width:30%;
-			 top: 21.7546698113%;
+			top:30%;
+				left: calc((25% - 100px) - ((30% - 250px) / 2)); 
+				width:30%;
+				bottom: calc((100% - 41.5714285719%) / 2); 
 			}
 			 div.tile1 {
 			 background-position: 40% 40%;
@@ -92,8 +93,11 @@ img.logOverlay {
 		 div.tile3,div.tile1,div.tile2 {
 			 background-position: 50% 40% !important;
 		  }
-		  
+	  .ribbon{
+		  display: none;
+	  }
 		  img.logOverlay {
+			  
 			left: calc((25% - 150px) - ((30% - 250px) / 2)); 
 			}
 		  button.joinbutton, button.donatebutton{
@@ -113,10 +117,170 @@ img.logOverlay {
 				}
 		  }
 
+@media (min-aspect-ratio: 17/8) {
+	.ribbon {
+		top:-50px;
+	}
+	
+	
+button.donatebutton {
+	  bottom: calc(2% + 60px);
+	}
+	
+button.joinbutton {
+	 bottom: calc(2% + 5px);
+	}
+	
+}
+	
+	
+
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+
+<script>
+$('.ribbon').on('click', function() {	
+  var self = $(this),
+      newone = self.clone(true);
+  
+  self.before(newone);
+  $("." + self.attr("class") + ":last").remove();
+});
+	
+</script>
+
+<style>
+
+.ribbon {
+  width: 400px;
+  height: 40px;
+  margin: 100px auto 0px;
+  position: relative;
+  color: #fff;
+  font: 22px   "Arial", "serif";
+  text-align: center;
+  background: #da1a21;
+  
+  -webkit-animation: main 250ms;
+  -moz-animation: main 250ms;
+  -ms-animation: main 250ms;
+  animation: main 250ms;
+}
+
+.ribbon i {
+  position: absolute;
+
+}
+
+.ribbon i:first-child, .ribbon i:nth-child(2) {
+  position: absolute;
+  left: -15px;
+  bottom: -15px;
+  z-index: -1;
+  border: 15px solid transparent;
+  border-right-color: #7a1308;
+  
+  -webkit-animation: edge 500ms;
+  -moz-animation: edge 500ms;
+  -ms-animation: edge 500ms;
+  animation: edge 500ms;
+}
+
+.ribbon i:nth-child(2) {
+  left: auto;
+  right: -15px;
+  border-right-color: transparent;
+  border-left-color: #7a1308;
+}
+
+.ribbon i:nth-child(3), .ribbon i:last-child {
+  width: 20px;
+  bottom: -15px;
+  left: -45px;
+  z-index: -2;
+  border: 20px solid #b7191a;
+  border-left-color: transparent;
+  
+  -webkit-animation: back 600ms;
+  -moz-animation: back 600ms;
+  -ms-animation: back 600ms;
+  animation: back 600ms;
+  
+  -webkit-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+.ribbon i:last-child {
+  bottom: -15px;
+  left: auto;
+  right: -45px;
+  border: 20px solid #b7191a;
+  border-right-color: transparent;
+
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+p {
+  text-align: center;
+  color: #aaa;
+}
+
+/* animations */
+
+@-webkit-keyframes main {
+  0% { -webkit-transform: scaleX(0); }
+  100% { -webkit-transform: scaleX(1); }
+}
+
+@-webkit-keyframes edge {
+  0%, 50% { -webkit-transform: scaleY(0); }
+  100% { -webkit-transform: scaleY(1); }
+}
+
+@-webkit-keyframes back {
+  0%, 75% { -webkit-transform: scaleX(0); }
+  100% { -webkit-transform: scaleX(1); }
 }
 
 
+@-moz-keyframes main {
+  0% { -moz-transform: scaleX(0); }
+  100% { -moz-transform: scaleX(1); }
+}
+
+@-moz-keyframes edge {
+  0%, 50% { -moz-transform: scaleY(0); }
+  100% { -moz-transform: scaleY(1); }
+}
+
+@-moz-keyframes back {
+  0%, 75% { -moz-transform: scaleX(0); }
+  100% { -moz-transform: scaleX(1); }
+}
+
+
+@keyframes main {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+@keyframes edge {
+  0%, 50% { transform: scaleY(0); }
+  100% { transform: scaleY(1); }
+}
+
+@keyframes back {
+  0%, 75% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
 </style>
+
 <body bgcolor="#E6E6FA">
 
 <!–– START Site Header ––>
@@ -128,12 +292,20 @@ img.logOverlay {
 
 </div>
 
-<div class="tile3" style="height: calc(100% - 120px); position: absolute; left: 0px; top: 60px; width:100%">
+<div class="tile2" style="height: calc(100% - 120px); position: absolute; left: 0px; top: 60px; width:100%">
 
-<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
+		<div class="ribbon" style="position: absolute;  left: calc(25% - 200px);">
+		  <span style="position:relative; top:5px"><b>#PhilWil</b> protect our environment</span>
+		  <i></i>
+		  <i></i>
+		  <i></i>
+		  <i></i>
+		</div>
 
-<button class="joinbutton">Join</button>
-<button class="donatebutton">Contribute</button>
+		<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
+
+		<button class="joinbutton">Join</button>
+		<button class="donatebutton">Contribute</button>
 </div>
 <!–– END Site Header ––>
 
