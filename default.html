@@ -1,24 +1,121 @@
 
 <style>
 
+div.tile3 {
+
+    background-image: url("Phil03.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% 20%;
+}
 div.tile2 {
 
     background-image: url("Phil02.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 70% 70%;
-
+    background-position: 40% 70%;
 }
-
 
 div.tile1 {
 
     background-image: url("Phil01.png");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 70% 60%;
+    background-position: 40% 30%;
+}
+
+button.donatebutton {
+  display: block;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  left: calc(25% - 100px);
+  bottom: calc(20% - 60px);
+  background-color: #197b30;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  font-size: 23px;
+  cursor: pointer;
+  height: 50px;
+  width: 250px;
+  outline: none;
+  border-radius: 50px;
+}
+
+button.joinbutton {
+  display: block;
+font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: calc(25% - 100px);
+  bottom: 20%;
+  background-color: #2a4f76;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  font-size: 23px;
+  cursor: pointer;
+  height: 50px;
+  width: 250px;
+  outline: none;
+  border-radius: 50px;
+}
+
+img.logOverlay {
+  display: block;
+    position: absolute; 
+	left: calc((25% - 100px) - ((400px - 250px) / 2)); 
+	bottom: 40%; 
+	width:400px;
+  }
+  
+ 
+@media only screen and (max-width: 1300px) 
+	{
+		img.logOverlay {
+			left: calc((25% - 100px) - ((30% - 250px) / 2)); 
+			width:30%;
+			 top: 21.7546698113%;
+			}
+			 div.tile1 {
+			 background-position: 40% 40%;
+			 
+			
+		  }
+		  
+		  div.tile2 {
+			 background-position: 40% 80%;
+		  }
+	}
+  
+  
+  @media only screen and (max-width: 800px) {
+		 div.tile3,div.tile1,div.tile2 {
+			 background-position: 50% 40% !important;
+		  }
+		  
+		  img.logOverlay {
+			left: calc((25% - 150px) - ((30% - 250px) / 2)); 
+			}
+		  button.joinbutton, button.donatebutton{
+		   left:calc(25% - 150px);
+		  }
+  
+  }
+  
+   @media only screen and (max-width: 600px) 
+   {
+ 
+		  button.joinbutton,img.logOverlay, button.donatebutton{
+			display:none;
+		  }
+			  div.tile1,div.tile2 {
+				background-position: 80% 40%;
+				}
+		  }
 
 }
+
+
 </style>
 <body bgcolor="#E6E6FA">
 
@@ -26,13 +123,17 @@ div.tile1 {
 
 <div id="header" style="background: white; height: 60px; position: fixed; top: 0px; left: 0px; width: 100%">
 
-<img src="logo.svg" alt="logo" style="position: relative; left: 10%; top: 5px;" height="50" ></img>
 
+<img src="logo.svg" alt="logo" style="position: relative; left: 15%; top: 5px;" height="50" ></img>
 
 </div>
 
-<div class="tile1" style="height: calc(100% - 120px); position: absolute; left: 0px; top: 60px; width:100%">
+<div class="tile3" style="height: calc(100% - 120px); position: absolute; left: 0px; top: 60px; width:100%">
 
+<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
+
+<button class="joinbutton">Join</button>
+<button class="donatebutton">Contribute</button>
 </div>
 <!–– END Site Header ––>
 
