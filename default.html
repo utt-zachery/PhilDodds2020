@@ -169,11 +169,12 @@ button.donatebutton {
 	
 	
 .ribbon {
+  z-index:10;
   width: 400px;
   height: 40px;
   margin: 100px auto 0px;
   position: relative;
-  
+  z-index: 8;
   background: #da1a21;
   
   -webkit-animation: main 250ms;
@@ -191,7 +192,7 @@ button.donatebutton {
   position: absolute;
   left: -15px;
   bottom: -15px;
-  z-index: -1;
+  z-index: 3;
   border: 15px solid transparent;
   border-right-color: #7a1308;
   
@@ -206,13 +207,14 @@ button.donatebutton {
   right: -15px;
   border-right-color: transparent;
   border-left-color: #7a1308;
+	 z-index: 4;
 }
 
 .ribbon i:nth-child(3), .ribbon i:last-child {
   width: 60px !important;
   bottom: -15px;
   left: -45px;
-  z-index: -2;
+  z-index: 2;
   border: 20px solid #b7191a;
   border-left-color: transparent;
   
@@ -233,7 +235,7 @@ button.donatebutton {
   right: -45px;
   border: 20px solid #b7191a;
   border-right-color: transparent;
-
+ z-index: 3;
   -webkit-transform-origin: 0 0;
   -moz-transform-origin: 0 0;
   -ms-transform-origin: 0 0;
@@ -306,7 +308,7 @@ p {
 <body >
 <!–– START Site Header ––>
 
-<div id="header" style="background: white; height: 64px; position: fixed; top: 0px; left: 0px; width: 100%; font-family: headerFont; color: rgb(42,79,118)">
+<div id="header" style="background: white; height: 64px; position: fixed; top: 0px; left: 0px; width: 100%; font-family: headerFont; color: rgb(42,79,118); z-index:9999">
 
 
 <img src="logo.svg" alt="logo" style="position: absolute; left: calc(25% - 55px); top: 10px;" height="50" ></img>
@@ -327,24 +329,61 @@ p {
 <!–– END Site Header ––>
 
 
-<div class="tile3" style="height: calc(100% - 120px); position: relative; left: 0px; top: 60px; width:100%">
-<div class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><span id="ribbonText" class="ribbonText" style="display: none; position:relative; top:6px; z-index: 10"><strong>#PhilWil</strong> invest in public education</span>
-  <div class="ribbon" style="position: relative; top: -127px;" >
-		  
-		  <i></i>
-		  <i></i>
-		  <i></i>
-		  <i></i>
-		 
-		</div>
-	</div>
-		
 
-		<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style= "position: relative; left: 0px; top: 65px; width:100%">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner" >
+    <div class="carousel-item active">
+      <div class="tile1" style="height: calc(100% - 120px); width:100%">
+				<div class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><span id="ribbonText" class="ribbonText" style="display: none; position:relative; top:6px; z-index: 10"><strong>#PhilWil</strong> invest in public education</span>
+					  <div class="ribbon" style="position: relative; top: -127px;" >
+							  <i></i>
+							  <i></i>
+							  <i></i>
+							  <i></i>
 
-		<button class="joinbutton" id="join">Join</button>
-		
-		<button class="donatebutton" id="contribute">Contribute</button>
+							</div>
+						</div>
+
+
+							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
+
+							<button class="joinbutton" id="join">Join</button>
+
+							<button class="donatebutton" id="contribute">Contribute</button>
+			</div>
+    </div>
+    <div class="carousel-item">
+       <div class="tile2" style="height: calc(100% - 120px); width:100%">
+				
+							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
+
+							<button class="joinbutton" id="join">Join</button>
+
+							<button class="donatebutton" id="contribute">Contribute</button>
+			</div>
+    </div>
+    <div class="carousel-item">
+      <div class="tile3" style="height: calc(100% - 120px); width:100%">
+			
+							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
+
+							<button class="joinbutton" id="join">Join</button>
+
+							<button class="donatebutton" id="contribute">Contribute</button>
+			</div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="">
+   
+  </a>
 </div>
 
 <script>
