@@ -61,7 +61,8 @@ button.joinbutton {
 }
 
 img.logOverlay {
-  display: block;
+	
+   display: block;
     position: absolute; 
 	left: calc((25% - 100px) - ((400px - 250px) / 2)); 
 	bottom: calc((100% - 240px) / 2); 
@@ -165,6 +166,8 @@ button.donatebutton {
   font: 22px   "Arial", "serif";
   text-align: center;
 	}
+	
+	
 .ribbon {
   width: 400px;
   height: 40px;
@@ -312,20 +315,20 @@ p {
 
 <a style='font-size: 35px; position: relative; top: 3px;  display:inline-block; '>Home<div style="border-bottom: 3px solid; position: relative; top: -12px; width:113%; left: -5px;"></div></a>
 
-<a style='font-size: 35px; position: relative; top: 3px;  padding-left: 3px; padding-right: 2px; display:inline-block; margin-left: 30px;'>Meet&nbsp;Phil</a>
+<a style='font-size: 35px; position: relative; top: 3px;  padding-left: 3px; padding-right: 2px; display:inline-block; margin-left: 30px;'>Meet&nbsp;&nbsp;Phil</a>
 
 <a style='font-size: 35px; position: relative; top: 3px;  padding-left: 3px; padding-right: 2px; display:inline-block; margin-left: 30px;'>Issues</a>
 
-<a style='font-size: 35px; position: relative; top: 3px;  padding-left: 3px; padding-right: 2px; display:inline-block; margin-left: 30px;'>En&nbsp;Espanol <img src="Tilde.svg" style="position: relative; left: -38px; bottom: 13px;" width="15"></img></a>
+<a style='font-size: 35px; position: relative; top: 3px;  padding-left: 3px; padding-right: 2px; display:inline-block; margin-left: 30px;'>En&nbsp;&nbsp;Espanol <img src="Tilde.svg" style="position: relative; left: -38px; bottom: 13px;" width="15"></img></a>
 
-<a style='font-size: 35px; position: relative; top: 3px;  padding-left: 3px; padding-right: 2px; display:inline-block; margin-left: 30px;'>Contribute</a>
+<a style='font-size: 35px; position: relative; top: 3px;  padding-left: 3px; padding-right: 2px; display:inline-block; margin-left: 20px;'>Contribute</a>
 	</div>
 </div>
 <!–– END Site Header ––>
 
 
-<div class="tile3" style="height: calc(100% - 120px); position: absolute; left: 0px; top: 60px; width:100%">
-<div class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><span class="ribbonText" style="position:relative; top:7px; z-index: 10"><strong>#PhilWil</strong> invest in public education</span>
+<div class="tile3" style="height: calc(100% - 120px); position: relative; left: 0px; top: 60px; width:100%">
+<div class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><span id="ribbonText" class="ribbonText" style="display: none; position:relative; top:6px; z-index: 10"><strong>#PhilWil</strong> invest in public education</span>
   <div class="ribbon" style="position: relative; top: -127px;" >
 		  
 		  <i></i>
@@ -347,13 +350,27 @@ p {
 <script>
 $( document ).ready(function() {
 	setTimeout(function() {
+		$("#ribbonText").fadeIn(750);
           var self = $('.ribbon'),
       newone = self.clone(true);
   	  self.before(newone);
 		$(".ribbonContainer").css("display","block");
   	$("." + self.attr("class") + ":last").remove();
     }, 1000);
- 
+	
+ /**
+	setTimeout(function() {
+		$(".logOverlay").fadeIn(1500);
+		var left = $('.logOverlay').position().left;  // Get the calculated left position
+		var start = $('.logOverlay').width();
+		
+		$(".logOverlay").css({left:0})  // Set the left to its calculated position
+				 .animate({"left":(left)}, {duration: 1000, queue: false});
+    }, 2000);
+	
+	
+	**/
+	
 });
 	
 	
