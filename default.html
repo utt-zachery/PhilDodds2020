@@ -43,7 +43,7 @@ button.donatebutton {
 
 button.joinbutton {
   display: block;
-font-family: Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   position: absolute;
   left: calc(25% - 100px);
   bottom: 20%;
@@ -63,7 +63,7 @@ img.logOverlay {
   display: block;
     position: absolute; 
 	left: calc((25% - 100px) - ((400px - 250px) / 2)); 
-	bottom: calc((100% - 289px) / 2); 
+	bottom: calc((100% - 240px) / 2); 
 	width:400px;
   }
   
@@ -72,10 +72,9 @@ img.logOverlay {
 @media only screen and (max-width: 1300px) 
 	{
 		img.logOverlay {
-			top:30%;
 				left: calc((25% - 100px) - ((30% - 250px) / 2)); 
 				width:30%;
-				bottom: calc((100% - 41.5714285719%) / 2); 
+				top: calc(58.4285714287% / 2)
 			}
 			 div.tile1 {
 			 background-position: 40% 40%;
@@ -89,11 +88,11 @@ img.logOverlay {
 	}
   
   
-  @media only screen and (max-width: 800px) {
-		 div.tile3,div.tile1,div.tile2 {
+  @media only screen and (max-width: 1010px) {
+		 div.tile3,div.tile1 {
 			 background-position: 50% 40% !important;
 		  }
-	  .ribbon{
+	  .ribbonContainer{
 		  display: none;
 	  }
 		  img.logOverlay {
@@ -117,28 +116,34 @@ img.logOverlay {
 				}
 		  }
 
-@media (min-aspect-ratio: 17/8) {
-	.ribbon {
-		top:-50px;
-	}
-	
-	
-button.donatebutton {
-	  bottom: calc(2% + 60px);
+@media (min-aspect-ratio: 13/8) {
+	.ribbonContainer {
+		position: absolute;
+		top:  calc(4% + 5px) !important;
 	}
 	
 button.joinbutton {
-	 bottom: calc(2% + 5px);
+	  bottom: calc(4% + 60px);
+	}
+	
+button.donatebutton {
+	 bottom: calc(4% + 5px);
 	}
 	
 }
 	
-	
+	 @media only screen and (max-height: 700px) 
+   {
+ 		 div.tile3,div.tile2, div.tile1 {
+			 height: 700px !important;
+		  }
+	}
 
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
 
 <script>
+	
 $('.ribbon').on('click', function() {	
   var self = $(this),
       newone = self.clone(true);
@@ -147,18 +152,25 @@ $('.ribbon').on('click', function() {
   $("." + self.attr("class") + ":last").remove();
 });
 	
+	
 </script>
 
 <style>
-
+	.ribbonContainer{
+		top: calc(20% - 60px);
+	}
+	
+	.ribbonText {
+		color: #fff;
+  font: 22px   "Arial", "serif";
+  text-align: center;
+	}
 .ribbon {
   width: 400px;
   height: 40px;
   margin: 100px auto 0px;
   position: relative;
-  color: #fff;
-  font: 22px   "Arial", "serif";
-  text-align: center;
+  
   background: #da1a21;
   
   -webkit-animation: main 250ms;
@@ -288,24 +300,29 @@ p {
 <div id="header" style="background: white; height: 60px; position: fixed; top: 0px; left: 0px; width: 100%">
 
 
-<img src="logo.svg" alt="logo" style="position: relative; left: 15%; top: 5px;" height="50" ></img>
+<img src="logo.svg" alt="logo" style="position: absolute; left: calc((25% - 100px) + ((250px - 120px) / 2)); top: 5px;" height="50" ></img>
 
 </div>
 
 <div class="tile2" style="height: calc(100% - 120px); position: absolute; left: 0px; top: 60px; width:100%">
-
-		<div class="ribbon" style="position: absolute;  left: calc(25% - 200px);">
-		  <span style="position:relative; top:5px"><b>#PhilWil</b> protect our environment</span>
+<div class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"> <span class ="ribbonText" style="position:relative; top:7px; z-index: 10"><b>#PhilWil</b> protect our environment</span>
+	
+	<div class="ribbon" style="position: relative; top: -127px;" >
+		  
 		  <i></i>
 		  <i></i>
 		  <i></i>
 		  <i></i>
+		 
 		</div>
+	</div>
+		
 
 		<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
 
-		<button class="joinbutton">Join</button>
-		<button class="donatebutton">Contribute</button>
+		<button class="joinbutton" id="join">Join</button>
+		
+		<button class="donatebutton" id="contribute">Contribute</button>
 </div>
 <!–– END Site Header ––>
 
