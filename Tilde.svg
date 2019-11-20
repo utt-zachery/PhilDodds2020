@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1500"
+   height="600"
+   viewBox="0 0 133.54703 37.6506"
+   version="1.1"
+   id="svg6"
+   sodipodi:docname="Tilde.svg"
+   inkscape:version="0.92.3 (2405546, 2018-03-11)">
+  <metadata
+     id="metadata12">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs10" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1017"
+     id="namedview8"
+     showgrid="false"
+     units="px"
+     inkscape:zoom="0.29774077"
+     inkscape:cx="113.22572"
+     inkscape:cy="145.91793"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g4" />
+  <g
+     style="fill:#2a4f76;fill-opacity:1;stroke:#2a4f76;stroke-width:0.025in;stroke-opacity:1"
+     id="g4"
+     transform="translate(6.4221848,10.837337)">
+    <text
+       x="5.9218669"
+       y="60.176464"
+       font-style="normal"
+       font-weight="normal"
+       font-size="200"
+       id="text2"
+       style="font-style:normal;font-weight:normal;font-size:200px;font-family:Times;text-anchor:start;fill:#2a4f76;fill-opacity:1;stroke:#2a4f76;stroke-width:22.2578392;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1">~</text>
+  </g>
+</svg>
