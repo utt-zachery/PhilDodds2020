@@ -170,19 +170,26 @@ button.donatebutton {
 	
 .ribbon {
   z-index:10;
+	 position: relative;
   width: 400px;
   height: 40px;
   margin: 100px auto 0px;
-  position: relative;
-  z-index: 8;
-  background: #da1a21;
-  
-  -webkit-animation: main 250ms;
-  -moz-animation: main 250ms;
-  -ms-animation: main 250ms;
-  animation: main 250ms;
+
 }
 
+	.ribbonBody
+	{
+	  z-index: 80;
+	  background: #da1a21;
+ width: 400px;
+  height: 40px;
+  margin: 100px auto 0px;
+	  -webkit-animation: main 250ms;
+	  -moz-animation: main 250ms;
+	  -ms-animation: main 250ms;
+	  animation: main 250ms;
+	}
+	
 .ribbon i {
   position: absolute;
 
@@ -330,7 +337,7 @@ p {
 
 
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style= "position: relative; left: 0px; top: 65px; width:100%">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false" style= "position: relative; left: 0px; top: 65px; width:100%">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -339,14 +346,16 @@ p {
   <div class="carousel-inner" >
     <div class="carousel-item active">
       <div class="tile1" style="height: calc(100% - 120px); width:100%">
-				<div class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><span id="ribbonText" class="ribbonText" style="display: none; position:relative; top:6px; z-index: 10"><strong>#PhilWil</strong> invest in public education</span>
-					  <div class="ribbon" style="position: relative; top: -127px;" >
+				<div class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><span id="ribbonText" class="ribbonText" style="display: none; position:relative; top:6px; z-index: 90; left: 25px;"><strong>#PhilWil</strong> invest in public education</span>
+					 		
+						   <div class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
 							  <i></i>
 							  <i></i>
 							  <i></i>
 
 							</div>
+							<div class = "ribbonBody" style="position: absolute; top: -103px; "></div>
 						</div>
 
 
