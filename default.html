@@ -73,11 +73,14 @@ img.logOverlay {
 	
 @media only screen and (max-width: 1300px) 
 	{
+		
+		
+		
 		img.logOverlay {
 				left: calc((25% - 100px) - ((30% - 250px) / 2)); 
 				width:30%;
 				top: calc(58.4285714287% / 2)
-			}
+			}file:///C:/Users/utt.zachery/Documents/GitHub/PhilDodds2020/default.html#carouselExampleIndicators
 			 div.tile1 {
 			 background-position: 40% 40%;
 			 
@@ -95,7 +98,7 @@ img.logOverlay {
 			 background-position: 50% 40% !important;
 		  }
 	  .ribbonContainer{
-		  display: none;
+		  display: none !important;
 	  }
 		  img.logOverlay {
 			  
@@ -315,29 +318,29 @@ p {
 <body >
 <!–– START Site Header ––>
 
-<div id="header" style="background: white; height: 64px; position: fixed; top: 0px; left: 0px; width: 100%; font-family: headerFont; color: rgb(42,79,118); z-index:9999">
+<div id="header" style="background: white; height: 70px; position: fixed; top: 0px; left: 0px; width: 100%; font-family: headerFont; color: rgb(42,79,118); z-index:9999">
 
 
-<img src="logo.svg" alt="logo" style="position: absolute; left: 20px; top: 10px;" height="50" ></img>
+<img src="logo.svg" class="headerLogo" alt="logo" style="position: absolute; left: 20px; top: 12px;" height="50" ></img>
 
-<div style="position: absolute;  right: calc(25% - 55px); display:inline-block">
+<div class="headerText" style="position: absolute;  right: 20px; display:inline-block;top: 6px;" >
 
-<a style='font-size: 35px; position: relative; top: 3px;  display:inline-block; '>Home<div style="border-bottom: 3px solid; position: relative; top: -12px; width:113%; left: -5px;"></div></a>
+<a style='font-size: 32px;  display:inline-block; '>Home<div style="border-bottom: 3px solid; position: relative; top: -11px; width:113%; left: -5px;"></div></a>
 
-<a style='font-size: 35px; position: relative; top: 3px; display:inline-block; margin-left: 30px;'>Meet&nbsp;&nbsp;Phil</a>
+<a style='font-size: 32px; display:inline-block; margin-left: 30px;'>Meet&nbsp;&nbsp;Phil</a>
 
-<a style='font-size: 35px; position: relative; top: 3px;   display:inline-block; margin-left: 30px;'>Issues</a>
+<a style='font-size: 32px;    display:inline-block; margin-left: 30px;'>Issues</a>
 
-<a style='font-size: 35px; position: relative; top: 3px; display:inline-block; margin-left: 30px;'>En&nbsp;&nbsp;Espanol <img src="Tilde.svg" style="position: relative; left: -38px; bottom: 13px;" width="15"></img></a>
+<a style='font-size: 32px;  display:inline-block; margin-left: 30px;'>En&nbsp;&nbsp;Espanol <img src="Tilde.svg" style="position: absolute; left: 383px; bottom: 35px;" width="15"></img></a>
 
-<a style='font-size: 35px; position: relative; top: 3px;   display:inline-block; margin-left: 20px;'>Contribute</a>
+<a style='font-size: 35px;   display:inline-block; margin-left: 30px;'>Contribute</a>
 	</div>
 </div>
 <!–– END Site Header ––>
 
 
 
-<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false" style= "position: relative; left: 0px; top: 65px; width:100%">
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false" style= "position: relative; left: 0px; top: 70px; width:100%">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="border-bottom: 20px solid transparent; border-top: 20px solid transparent"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1" style="border-bottom:  20px solid transparent; border-top:  20px solid transparent"></li>
@@ -421,6 +424,6 @@ $( document ).ready(function() {
 	
 	
 </script>
-<br/><br/> <span>Our Campaign</span>
+<br/><br/><br/><div style="width: 100%; text-align: center; font-size: 28px">Our Campaign</div>
 
 </body>
