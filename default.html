@@ -2,7 +2,9 @@
 
 <style>
 	
+	
 	a.headerLink {
+	margin-left: 30px;
    color: rgb(42,79,118) !important;
   text-decoration: none;
 		
@@ -68,7 +70,7 @@ div.tile1 {
 
 img.logOverlay {
 	
-   display: block;
+    display: block;
     position: absolute; 
 	left: calc((25% - 100px) - ((400px - 250px) / 2)); 
 	bottom: calc((100% - 240px) / 2); 
@@ -116,6 +118,12 @@ img.logOverlay {
   
   }
   
+   @media only screen and (max-width: 765px) 
+   {
+ 		
+		
+   }
+	
    @media only screen and (max-width: 600px) 
    {
  
@@ -333,13 +341,13 @@ p {
 
 <a target="_blank" class="headerLink" style='font-size: 32px;  display:inline-block; '>Home<div style="border-bottom: 3px solid; position: relative; top: -11px; width:113%; left: -5px;"></div></a>
 
-<a target="_blank" class="headerLink"  style='font-size: 32px; display:inline-block; margin-left: 30px;'>Meet&nbsp;&nbsp;Phil</a>
+<a target="_blank" class="headerLink"  style='font-size: 32px; display:inline-block;'>Meet&nbsp;&nbsp;Phil</a>
 
-<a target="_blank" class="headerLink"  style='font-size: 32px;    display:inline-block; margin-left: 30px;'>Issues</a>
+<a target="_blank" class="headerLink"  style='font-size: 32px;  display:inline-block;'>Issues</a>
 
-<a target="_blank" class="headerLink"  style='font-size: 32px;  display:inline-block; margin-left: 30px;'>En&nbsp;&nbsp;Espanol <img src="Tilde.svg" style="position: absolute; left: 383px; bottom: 35px;" width="15"></img></a>
+<a target="_blank" class="headerLink"  style='font-size: 32px;  display:inline-block;'>En&nbsp;&nbsp;Espanol <img src="Tilde.svg" style="position: absolute; left: 383px; bottom: 35px;" width="15"></img></a>
 
-<a  target="_blank" class="headerLink" href= "https://www.votersforphildodds.org/donate_via_actblue" style='font-size: 35px;   display:inline-block; margin-left: 30px;'>Contribute</a>
+<a  target="_blank" class="headerLink" href= "https://www.votersforphildodds.org/donate_via_actblue" style='font-size: 35px; display:inline-block;'>Contribute</a>
 	</div>
 </div>
 <!–– END Site Header ––>
@@ -355,8 +363,8 @@ p {
   <div class="carousel-inner" >
     <div class="carousel-item active">
       <div class="tile1" style="height: calc(100% - 120px); width:100%">
-				<div class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#PhilWil</strong> invest in public education</div>
-						   <div class="ribbon" style="position: absolute; top: -103px" >
+				<div id="ribbonContainer1" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText1" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#PhilWil</strong> protect our environment</div>
+						   <div id="ribbon1" class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
 							  <i></i>
 							  <i></i>
@@ -375,7 +383,16 @@ p {
     </div>
     <div class="carousel-item">
        <div class="tile2" style="height: calc(100% - 120px); width:100%">
-				
+				<div id="ribbonContainer2" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText2" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#PhilWil</strong> fight for rural America</div>
+						   <div id="ribbon2" class="ribbon" style="position: absolute; top: -103px" >
+							  <i></i>
+							  <i></i>
+							  <i></i>
+							  <i></i>
+							</div>
+							<div class = "ribbonBody" style="position: absolute; top: -103px; "></div>
+						</div>
+
 							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
 
 							<button class="joinbutton" id="join">Join</button>
@@ -385,7 +402,16 @@ p {
     </div>
     <div class="carousel-item">
       <div class="tile3" style="height: calc(100% - 120px); width:100%">
-			
+			<div id="ribbonContainer3" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText3" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#PhilWil</strong> invest in public education</div>
+						   <div id="ribbon3" class="ribbon" style="position: absolute; top: -103px" >
+							  <i></i>
+							  <i></i>
+							  <i></i>
+							  <i></i>
+							</div>
+							<div class = "ribbonBody" style="position: absolute; top: -103px; "></div>
+						</div>
+
 							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
 
 							<button class="joinbutton" id="join">Join</button>
@@ -403,16 +429,40 @@ p {
 </div>
 
 <script>
-$( document ).ready(function() {
-	setTimeout(function() {
-		$("#ribbonText").fadeIn(750);
-          var self = $('.ribbon'),
+	
+	//Main Timer function
+	
+	var carouselEngine = setInterval(mainTimer, 6000);
+
+	function mainTimer() {
+  		$("#carouselExampleIndicators").carousel('next');
+	}
+	
+	
+	$("#carouselExampleIndicators").on('slide.bs.carousel', function (event) {
+		setTimeout(function() {
+			var slideIndex = event.to + 1;
+		$("#ribbonText" + slideIndex).fadeIn(750);
+          var self = $('#ribbon' + slideIndex),
       newone = self.clone(true);
   	  self.before(newone);
-		$(".ribbonContainer").css("display","block");
-  	$("." + self.attr("class") + ":last").remove();
-    }, 1000);
+		$("#ribbonContainer" + slideIndex).css("display","block");
+  		$("#ribbon" + slideIndex + ":last").remove();
+		$("#ribbonContainer" + (event.from + 1)).css("display","none");
+			$("#ribbonText" + (event.from + 1)).css("display","none");
+    }, 1200);
+});
 	
+	
+$( document ).ready(function() {
+	setTimeout(function() {
+		$("#ribbonText1").fadeIn(750);
+          var self = $('#ribbon1'),
+      newone = self.clone(true);
+  	  self.before(newone);
+		$("#ribbonContainer1").css("display","block");
+  		$("#ribbon1:last").remove();
+    }, 1000);
  /**
 	setTimeout(function() {
 		$(".logOverlay").fadeIn(1500);
