@@ -2,13 +2,17 @@
 
 <style>
 	
-	
 	a.headerLink {
 	margin-left: 30px;
    color: rgb(42,79,118) !important;
-  text-decoration: none;
-		
+  text-decoration: none;	
 }
+	a.headerLinkN {
+	margin-left: 15px;
+   color: rgb(42,79,118) !important;
+  text-decoration: none;	
+}
+	
 div.tile3 {
   z-index: -10;
     background-image: url("Phil03.png");
@@ -121,9 +125,43 @@ img.logOverlay {
    @media only screen and (max-width: 765px) 
    {
  		
-		
+		a.headerLink {
+			margin-left: 15px;
+		}
+		a.headerLinkN {
+		margin-left: 0px;
+		}
    }
 	
+	@media only screen and (max-width: 690px) 
+   {
+	   
+	   .tilde {
+		   display: none;
+		   top: -7px;
+	   }
+	   .headerText {
+		   width: 220px;
+		   top: 2px !important;
+	   }
+		a.headerLink {
+			font-size: 23px !important;
+			margin-left: 15px;
+			height: 30px;
+		}
+		a.headerLinkN {
+			margin-left: 15px;
+			font-size: 23px !important;
+			height: 30px
+		}
+	   .mover {
+		   margin-left: 20px !important;
+	   }
+	   .underLine {
+		   top: -7px !important;
+		   left: -3px !important;
+	   }
+   }
    @media only screen and (max-width: 600px) 
    {
  
@@ -161,9 +199,6 @@ img.logOverlay {
 </style>
 
 	
-
-
-
 
 <style>
 	
@@ -339,15 +374,15 @@ p {
 
 <div class="headerText" style="position: absolute;  right: 20px; display:inline-block;top: 6px;" >
 
-<a target="_blank" class="headerLink" style='font-size: 32px;  display:inline-block; '>Home<div style="border-bottom: 3px solid; position: relative; top: -11px; width:113%; left: -5px;"></div></a>
+<a target="_blank" class="headerLink" style='font-size: 32px;  display:inline-block; '>Home<div class="underLine" style="border-bottom: 3px solid; position: relative; top: -11px; width:113%; left: -5px;"></div></a>
 
 <a target="_blank" class="headerLink"  style='font-size: 32px; display:inline-block;'>Meet&nbsp;&nbsp;Phil</a>
 
 <a target="_blank" class="headerLink"  style='font-size: 32px;  display:inline-block;'>Issues</a>
 
-<a target="_blank" class="headerLink"  style='font-size: 32px;  display:inline-block;'>En&nbsp;&nbsp;Espanol <img src="Tilde.svg" style="position: absolute; left: 383px; bottom: 35px;" width="15"></img></a>
+<a target="_blank" class="headerLink mover"  style='font-size: 32px;  display:inline-block;'>En&nbsp;&nbsp;Espanol <img src="Tilde.svg" class="tilde" style="position: relative; right: 36px; bottom: 13px;" width="15"></img></a>
 
-<a  target="_blank" class="headerLink" href= "https://www.votersforphildodds.org/donate_via_actblue" style='font-size: 35px; display:inline-block;'>Contribute</a>
+<a  target="_blank" class="headerLinkN" href= "https://www.votersforphildodds.org/donate_via_actblue" style='font-size: 35px; display:inline-block;'>Contribute</a>
 	</div>
 </div>
 <!–– END Site Header ––>
@@ -362,7 +397,7 @@ p {
   </ol>
   <div class="carousel-inner" >
     <div class="carousel-item active">
-      <div class="tile1" style="height: calc(100% - 120px); width:100%">
+      <div class="tile1" style="height: calc(100vh - 120px); width:100%">
 				<div id="ribbonContainer1" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText1" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#PhilWil</strong> protect our environment</div>
 						   <div id="ribbon1" class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
@@ -382,7 +417,7 @@ p {
 			</div>
     </div>
     <div class="carousel-item">
-       <div class="tile2" style="height: calc(100% - 120px); width:100%">
+       <div class="tile2" style="height: calc(100vh - 120px); width:100%">
 				<div id="ribbonContainer2" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText2" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#PhilWil</strong> fight for rural America</div>
 						   <div id="ribbon2" class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
@@ -401,7 +436,7 @@ p {
 			</div>
     </div>
     <div class="carousel-item">
-      <div class="tile3" style="height: calc(100% - 120px); width:100%">
+      <div class="tile3" style="height: calc(100vh - 120px); width:100%">
 			<div id="ribbonContainer3" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText3" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#PhilWil</strong> invest in public education</div>
 						   <div id="ribbon3" class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
