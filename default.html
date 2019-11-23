@@ -588,8 +588,106 @@ console.log($(document).scrollTop());
 
 </script>
 
-<div style="background-color: rgb(42,79,118); color: white; height: 400px">
+<div style="background-color: rgb(42,79,118); color: white; min-height: 400px">
 <div style="text-align: center; font-size: 30px; padding-top: 10px">Issues</div>
+<br/>
+<br/>
+		<style>
+		.accordion {
+		  color: white;
+		  cursor: pointer;
+		  border: solid 3px white;
+		  width: 350px;
+			padding: 7px;
+		  text-align: left;
+		  outline: none;
+		  font-size: 22px;
+		 margin-left: 3px;
+		  transition: 0.4s;
+		  margin-bottom:10px;
+		}
+
+		.activeAccordian, .accordion:hover {
+		 	 background-color: white;
+			 color: rgb(42,79,118);
+		}
+
+		.accordion:after {
+		  content: '\002B';
+		  color: white;
+		  font-weight: bold;
+		  float: right;
+		  margin-left: 5px;
+		}
+
+		.activeAccordian:after {
+		  content: rgb(42,79,118);
+		}
+
+		.panel {
+		  
+		  padding: 0 18px;
+		  background-color: white;
+		  max-height: 0;
+		  overflow: hidden;
+		  transition: max-height 0.2s ease-out;
+		  width: 350px;
+		}
+		</style>
+		</head>
+		<body>
+		<div style="float: left">
+				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Education</div></div>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+
+					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Healthcare</div></div>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+
+					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Section 3</div></div>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+		</div>
+		<div style="float: left; margin-left: 100px">
+				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Education</div></div>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+
+					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Healthcare</div></div>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+
+					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Section 3</div></div>
+				<div class="panel">
+				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				</div>
+		</div>
+
+		<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+			this.classList.toggle("activeAccordian");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+			  panel.style.maxHeight = null;
+			} else {
+			  panel.style.maxHeight = panel.scrollHeight + "px";
+			} 
+		  });
+		}
+		</script>
 
 </div>
+</div>
+
+<br/><br/>
 </body>
