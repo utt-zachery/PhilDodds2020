@@ -636,7 +636,7 @@ console.log($(document).scrollTop());
 		</style>
 		</head>
 		<body>
-		<div style="float: left">
+		<div style="float: left; margin-left: calc((100% - 812px) / 2)">
 				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Education</div></div>
 				<div class="panel">
 				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
@@ -688,6 +688,44 @@ console.log($(document).scrollTop());
 
 </div>
 </div>
+<div style="text-align: center; font-size: 30px; padding-top: 10px; color: rgb(42,79,118)">Get Involved</div>
+<br/>
+
+<div id="eventsHolder"></div>
+
+<script>
+	function addItem()
+	{
+		var spacer = document.createElement("br");
+		var div = document.createElement("div");
+			div.style= "font-size: 19px; margin-left: 20%; color: black; height: 85px";
+
+			var innerDIV = document.createElement("div");
+				innerDIV.style="float: left";
+			var title = document.createElement("span");
+				title.innerHTML = "<b>Event Name</b>: Meet 'n Greet</br>";
+			var date = document.createElement("span");
+				date.innerHTML = "<b>Date</b>: 10/21/2019</br>";
+			var time = document.createElement("span");
+				time.innerHTML = "<b>Time</b>: 6:00 PM - 8:00 PM</br>";
+
+			var signUP = document.createElement("div");
+				signUP.style = "float: right; background-color: red; width: 140px; height: 40px; position: absolute; margin-top:22px; right: 20%; color: white;";
+				signUP.innerHTML="<b><div style='text-align: center; position: relative; top: 5px'>Sign Up</div></b>";
+
+		innerDIV.appendChild(title);
+		innerDIV.appendChild(date);
+		innerDIV.appendChild(time);
+		div.appendChild(innerDIV);
+		div.appendChild(signUP);
+		document.getElementById("eventsHolder").appendChild(div);
+		document.getElementById("eventsHolder").appendChild(spacer);
+		
+	}
+	
+	addItem();
+</script>
 
 <br/><br/>
+
 </body>
