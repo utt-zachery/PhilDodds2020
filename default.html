@@ -377,8 +377,6 @@ p {
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-
-
 </head>
 
 
@@ -404,7 +402,6 @@ p {
 	</div>
 </div>
 <!–– END Site Header ––>
-
 
 
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false" style= "position: relative; left: 0px; top: 70px; width:100%">
@@ -539,31 +536,31 @@ $( document ).ready(function() {
 <div style="color: rgb(42,79,118); padding-top: 10px; ">
 <div style="margin-left: calc((100% - 1100px) / 2); padding-bottom: 400px;">
 	<div style="float: left">
-		<img src="money.svg" height="150" style="position: relative;  left: calc((100% - 130px) / 2)"></img><br/>
+		<img class="fadable" src="money.svg" height="150" style="position: relative;  left: calc((100% - 130px) / 2)"></img><br/>
 		<div style="font-size: 21px; margin-top: 20px; text-align: center">
 			<b>No Corporate PAC Money</b>
 		</div>
-		<div style="margin-top: 10px;font-size: 15px; width: 300px" >
+		<div style="margin-top: 15px;font-size: 15px; width: 300px" >
 			Phil doesn't just talk about campaign finance, his campaign embodies it. Phil believes in cleaning up our politics and will work to root out corruption every cranny where it exists, even when it its not convinent.
 		</div>
 	</div>
 	<div style="float: left; margin-left: 100px;">
-		<img src="people.svg" height="150" style="position: relative;  left: calc((100% - 270px) / 2)"></img><br/>
+		<img class="fadable" src="people.svg" height="150" style="position: relative;  left: calc((100% - 270px) / 2)"></img><br/>
 		<div style="font-size: 21px; margin-top: 20px; text-align: center">
 			<b>Centered Around You</b>
 		</div>
-		<div style="margin-top: 10px;font-size: 15px; width: 300px; position: relative; left: 10px" >
+		<div style="margin-top: 15px;font-size: 15px; width: 300px; position: relative; left: 10px" >
 			Phil isn't running for congress to represent billionaires or corporations. Built around an unprecedent level of public input, Phil's campaign is about creating a government that works for everyone.
 		</div>
 		
 	</div>
 	
 	<div style="float: left; margin-left: 100px;">
-		<img src="screwdriver.svg" height="150" style="position: relative;  left: calc((100% - 150px) / 2)"></img><br/>
+		<img class="fadable" src="screwdriver.svg" height="150" style="position: relative;  left: calc((100% - 150px) / 2)"></img><br/>
 		<div style="font-size: 21px; margin-top: 20px; text-align: center">
 			<b>Fixing Partisan Gridlock</b>
 		</div>
-		<div style="margin-top: 10px;font-size: 15px; width: 300px" >
+		<div style="margin-top: 15px;font-size: 15px; width: 300px" >
 			As an engineer and former independent, Phil isn't running to promote radical policies meant to divide the country. Phil's campaign is about bringing people together to solve the biggest problems of our generation.
 		</div>
 		
@@ -571,4 +568,28 @@ $( document ).ready(function() {
 	</div>
 </div>
 
+<script>
+   var fadeStart=10 // 100px scroll or less will equiv to 1 opacity
+    ,fadeUntil=400 // 200px scroll or more will equiv to 0 opacity
+    ,fading = $('.fadable')
+;
+$(window).bind('scroll', function(){
+console.log($(document).scrollTop());
+    var offset = $(document).scrollTop();
+    var opacity = 0.20;
+  
+    if( offset<=fadeUntil && offset >= fadeStart){
+       opacity= Math.min(0.15 + (offset/fadeUntil),1);
+    }else{
+        opacity=1;
+    }
+    fading.css('opacity',opacity).html(opacity);
+});
+
+</script>
+
+<div style="background-color: rgb(42,79,118); color: white; height: 400px">
+<div style="text-align: center; font-size: 30px; padding-top: 10px">Issues</div>
+
+</div>
 </body>
