@@ -380,7 +380,7 @@ p {
 </head>
 
 
-<body onclick="clearInterval(carouselEngine)" onscroll="clearInterval(carouselEngine)">
+<body onclick="clearInterval(carouselEngine)" onscroll="clearInterval(carouselEngine)" style="overflow: auto">
 <!–– START Site Header ––>
 
 <div id="header" style="background: white; height: 70px; position: fixed; top: 0px; left: 0px; width: 100%; font-family: headerFont;  z-index:9999">
@@ -426,7 +426,7 @@ p {
 
 							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
 
-							<button class="joinbutton" id="join">Join</button>
+							<button class="joinbutton" id="join" onclick="toggleJoin()">Join</button>
 
                             <button onclick=" window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" class="donatebutton" id="contribute">Contribute</button>
 			</div>
@@ -464,7 +464,7 @@ p {
 
 							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
 
-							<button class="joinbutton" id="join">Join</button>
+							<button class="joinbutton" id="join" onclick="toggleJoin()">Join</button>
 
 							<button onclick=" window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" class="donatebutton" id="contribute">Contribute</button>
 			</div>
@@ -639,7 +639,6 @@ console.log($(document).scrollTop());
 		}
 		</style>
 		</head>
-		<body style="overflow:hidden;">
 		<table style="margin-left: calc((100% - 962px) / 2)">
 		<td style="vertical-align: text-top; padding-right: 50px">
 		<div >
@@ -778,26 +777,46 @@ console.log($(document).scrollTop());
    height: 40%;
 }
 </style>
-<div id="overlay" style="position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.8); top: 0px; left: 0px; z-index:9999999; overflow: hidden;">
+<div id="overlay" style="position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.8); top: 0px; left: 0px; z-index:9999999; overflow: hidden; display: none" onclick="toggleJoin()">
 
-<div style="background-color: white; width: 35%; height: 90%; box-shadow: 7px 7px 7px black; position: fixed; left: 32.5%; top: 5%">
+<div id="join-popup" style="background-color: white; width: 500px; height: 90%; box-shadow: 7px 7px 7px black; position: fixed; left: calc((100% - 500px) /2); top: 5%; display: none" onclick="event.stopPropagation();">
 
 <div class="phil_door"></div>
-<div style="margin-left: 10px; margin-right: 10px">
+<div style="margin-left: 20px; margin-right: 20px">
 <br/><div style="width; 100%; text-align: center; font-size: 24">Be Part of the Solution</div>
 <br/>We need door knockers, house part hosts, visionaries, and signiture gatherers. We need mothers, and daughters, workers, fathers. We need people who care and want to make a difference.
 
-<br/>
-<br/><div style="width; 100%; text-align: center; font-size: 18">We need you.</div>
+
+<br/><div style="width; 100%; text-align: center; font-size: 18"><b>We need you.</b></div>
 <br/>
 <form>
 <div style="display: inline-block">Name:</div> <input id="name" style="display: inline-block; position: absolute; left: 70px;width: 400px"></input></div>
 <div style"height:50px; width: 5px">
-<div style="display: inline-block; position: relative; left: 10px;">Email:</div> <input id="email" style="display: inline-block; position: absolute; left: 70px; width:400px"></input>
+<div style="display: inline-block; position: relative; left: 20px;">Email:</div> <input id="email" style="display: inline-block; position: absolute; left: 70px; width:400px"></input>
 <br/>
 <submit class="joinbutton" style="position: relative; left: 130px !important; top: 30px" ><div style="margin-top: 5px; ">Join</div></submit>
 
 </form>
+
+<script>
+
+function toggleJoin()
+{
+	$("#overlay").toggle();
+	$("#join-popup").toggle();
+
+	if ($("#overlay").css("display") == "none")
+{
+document.body.style="overflow: hidden";
+}
+else
+{
+document.body.style="overflow: auto";
+}
+
+}
+
+</script>
 </div>
 </div>
 
