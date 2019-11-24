@@ -588,7 +588,7 @@ console.log($(document).scrollTop());
 
 </script>
 
-<div style="background-color: rgb(42,79,118); color: white; min-height: 400px">
+<div style="background-color: rgb(42,79,118); color: white; padding-bottom: 100px">
 <div style="text-align: center; font-size: 30px; padding-top: 10px">Issues</div>
 <br/>
 <br/>
@@ -610,6 +610,7 @@ console.log($(document).scrollTop());
 		.activeAccordian, .accordion:hover {
 		 	 background-color: white;
 			 color: rgb(42,79,118);
+			
 		}
 
 		.accordion:after {
@@ -622,53 +623,61 @@ console.log($(document).scrollTop());
 
 		.activeAccordian:after {
 		  content: rgb(42,79,118);
+			
 		}
 
 		.panel {
 		  
-		  padding: 0 18px;
-		  background-color: white;
+		text-align: center;
+	 	  color: white;
+		  margin-left: 4px;
 		  max-height: 0;
 		  overflow: hidden;
 		  transition: max-height 0.2s ease-out;
 		  width: 450px;
+			
 		}
 		</style>
 		</head>
 		<body>
-		<div style="float: left; margin-left: calc((100% - 1012px) / 2)">
+		<table style="margin-left: calc((100% - 962px) / 2)">
+		<td style="vertical-align: text-top; padding-right: 50px">
+		<div >
 				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Education</div></div>
 				<div class="panel">
-				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
 
 					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Healthcare</div></div>
 				<div class="panel">
-				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
 
 					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Section 3</div></div>
 				<div class="panel">
-				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
 		</div>
-		<div style="float: left; margin-left: 100px">
+		</td>
+		<td style="vertical-align: text-top">
+		<div >
 				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Education</div></div>
 				<div class="panel">
-				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
 
 					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Healthcare</div></div>
 				<div class="panel">
-				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
 
 					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Section 3</div></div>
 				<div class="panel">
-				  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 				</div>
 		</div>
-
+		</td>
+			</table>
 		<script>
 		var acc = document.getElementsByClassName("accordion");
 		var i;
@@ -679,8 +688,10 @@ console.log($(document).scrollTop());
 			var panel = this.nextElementSibling;
 			if (panel.style.maxHeight) {
 			  panel.style.maxHeight = null;
+				panel.style.marginBottom = 0;
 			} else {
 			  panel.style.maxHeight = panel.scrollHeight + "px";
+			  panel.style.marginBottom = 15;
 			} 
 		  });
 		}
@@ -723,6 +734,8 @@ console.log($(document).scrollTop());
 		
 	}
 	
+	addItem();
+	addItem();
 	addItem();
 </script>
 
