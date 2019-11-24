@@ -6,4 +6,4 @@ TODO:
 = link events to google API
 = fix issues accoridan
 = join butoon
-
+= resizing for the accordions and the 3 icons
