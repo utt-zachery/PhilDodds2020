@@ -639,7 +639,7 @@ console.log($(document).scrollTop());
 		}
 		</style>
 		</head>
-		<body>
+		<body style="overflow:hidden;">
 		<table style="margin-left: calc((100% - 962px) / 2)">
 		<td style="vertical-align: text-top; padding-right: 50px">
 		<div >
@@ -767,4 +767,39 @@ console.log($(document).scrollTop());
 	
 	
 </footer>
+
+<style>
+.phil_door {
+    background-image: url("Phil_Door.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% 50%;
+    width: 100%;
+   height: 40%;
+}
+</style>
+<div id="overlay" style="position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.8); top: 0px; left: 0px; z-index:9999999; overflow: hidden;">
+
+<div style="background-color: white; width: 35%; height: 90%; box-shadow: 7px 7px 7px black; position: fixed; left: 32.5%; top: 5%">
+
+<div class="phil_door"></div>
+<div style="margin-left: 10px; margin-right: 10px">
+<br/><div style="width; 100%; text-align: center; font-size: 24">Be Part of the Solution</div>
+<br/>We need door knockers, house part hosts, visionaries, and signiture gatherers. We need mothers, and daughters, workers, fathers. We need people who care and want to make a difference.
+
+<br/>
+<br/><div style="width; 100%; text-align: center; font-size: 18">We need you.</div>
+<br/>
+<form>
+<div style="display: inline-block">Name:</div> <input id="name" style="display: inline-block; position: absolute; left: 70px;width: 400px"></input></div>
+<div style"height:50px; width: 5px">
+<div style="display: inline-block; position: relative; left: 10px;">Email:</div> <input id="email" style="display: inline-block; position: absolute; left: 70px; width:400px"></input>
+<br/>
+<submit class="joinbutton" style="position: relative; left: 130px !important; top: 30px" ><div style="margin-top: 5px; ">Join</div></submit>
+
+</form>
+</div>
+</div>
+
+</div>
 </body>
