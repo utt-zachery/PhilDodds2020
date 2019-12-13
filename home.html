@@ -1,0 +1,842 @@
+<head>
+
+<style>
+	
+	.philTile
+	{
+	background-size: cover;
+    background-repeat: no-repeat;
+	}
+	
+	.headerLink {
+	margin-left: 30px;
+   color:white !important;
+  text-decoration: none;	
+}
+	.headerLinkN {
+	margin-left: 15px;
+   color:  white !important;
+  text-decoration: none;	
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-color: rgba(255, 0, 0, 0.85);
+		 transition: 0.2s ease-in;
+}
+
+	div.headerLinkN:hover {
+		background-color: rgba(255, 0, 0, 1);
+	}
+	
+	
+div.tile3 {
+  z-index: -10;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) , rgba(255, 255, 255, 0) 30%),url("phil-mobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% 50%;
+}
+div.tile2 {
+  z-index: -10;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) , rgba(255, 255, 255, 0) 40%),url("Phil02.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 40% 70%;
+}
+
+div.tile1 {
+  z-index: -10;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) , rgba(255, 255, 255, 0) 30%),url("phil-mobile.png");
+    
+    background-position: 40% 35%;
+}
+
+.donatebutton {
+  outline: 0 !important;
+  display: block;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  left: calc(25% - 100px);
+  bottom: calc(20% - 60px);
+  background-color: #197b30;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  font-size: 23px;
+  cursor: pointer;
+  height: 50px;
+  width: 250px;
+  border-radius: 50px;
+}
+
+.joinbutton {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: calc(25% - 100px);
+  bottom: 20%;
+  background-color: rgb(42,79,118);
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  font-size: 23px;
+  cursor: pointer;
+  height: 50px;
+  width: 250px;
+  outline: 0 !important;
+  border-radius: 50px;
+}
+
+img.logOverlay {
+	
+    display: block;
+    position: absolute; 
+	left: calc((25% - 100px) - ((400px - 250px) / 2)); 
+	bottom: calc((100% - 240px) / 2); 
+	width:400px;
+  }
+  
+
+	
+@media only screen and (max-width: 1300px) 
+	{
+		img.logOverlay {
+				left: calc((25% - 100px) - ((30% - 250px) / 2)); 
+				width:30%;
+				top: calc((20% - 15px) + (((100vh - 140px) - (30vw * 0.74213679245)) - (40vh - 45px)) / 2);
+			}
+			 div.tile1 {
+			 background-position: 40% 40%;
+			 
+			
+		  }
+		  
+		  div.tile2 {
+			 background-position: 40% 80%;
+		  }
+	}
+  
+  
+  @media only screen and (max-width: 1010px) {
+		 div.tile3,div.tile1 {
+			 background-position: 50% 40%;
+		  }
+	  .ribbonContainer{
+		  display: none !important;
+	  }
+		  img.logOverlay {
+			top: calc(51.4285714287% / 2);
+			left: calc((25% - 150px) - ((30% - 250px) / 2)); 
+			}
+		  .joinbutton, .donatebutton{
+		   left:calc(25% - 150px);
+		  }
+  
+  }
+  
+   @media only screen and (max-width: 765px) 
+   {
+ 		
+		a.headerLink {
+			margin-left: 15px;
+		}
+		a.headerLinkN {
+		margin-left: 0px;
+		}
+   }
+	
+	
+   @media only screen and (max-width: 600px) 
+   {
+ 
+		  .joinbutton,img.logOverlay, .donatebutton{
+			display:none;
+		  }
+			  div.tile1,div.tile2 {
+				background-position: 80% 40%;
+				}
+		  }
+
+@media (min-aspect-ratio: 12/8) {
+	.ribbonContainer {
+		position: absolute;
+		top:  calc(4% + 25px) !important;
+	}
+	
+.joinbutton {
+	  bottom: calc(4% + 65px);
+	}
+	
+.donatebutton {
+	 bottom: calc(4% + 5px);
+	}
+	
+	
+}
+	
+	 @media only screen and (max-height: 680px) 
+   {
+ 		 div.tile3,div.tile2, div.tile1 {
+			 height: 680px !important;
+		  }
+	   
+	   .logOverlay {
+		   top: calc(95px + ((451px - (30vw * 0.74213679245)) / 2)) !important;
+	   }
+	   
+	}
+	
+	 @media only screen and (max-height: 680px) and (min-width: 1300px)
+   {
+	   .logOverlay {
+		   top: calc(95px + ((451px - (400px * 0.74213679245)) / 2)) !important;
+	   }
+	}
+
+	@media only screen and (max-width: 690px) 
+   {
+	   .textSpacer {
+		   width: 4px !important;
+	   }
+	   .tilde {
+		   width: 11px !important;
+		   top: -9px;
+		   left: -25px;
+	   }
+	   .headerText {
+		   width: 220px;
+		   top: 2px !important;
+	   }
+		a.headerLink {
+			font-size: 23px !important;
+			margin-left: 15px;
+			height: 30px;
+		}
+		a.headerLinkN {
+			margin-left: 15px;
+			font-size: 23px !important;
+			height: 30px
+		}
+	   .mover {
+		   margin-left: 20px !important;
+	   }
+	   .underLine {
+		   top: -7px !important;
+		   left: -3px !important;
+	   }
+	   
+	   .tile3 {
+	   background-position: 75% 50% !important;
+	   }
+   }
+</style>
+
+	
+
+<style>
+	
+	@font-face {
+  font-family: headerFont;
+  src: url(bold.otf);
+  font-weight: bold;
+}
+	
+	.ribbonContainer{
+		 display: none;
+		top: calc(20% - 60px);
+	}
+	
+	.ribbonText {
+		color: #fff;
+  font: 22px   "Arial", "serif";
+  text-align: center;
+	}
+	
+	
+.ribbon {
+  z-index:10;
+	 position: relative;
+  width: 400px;
+  height: 40px;
+  margin: 100px auto 0px;
+
+}
+
+	.ribbonBody
+	{
+	  z-index: 80;
+	  background: #da1a21;
+ width: 400px;
+  height: 40px;
+  margin: 100px auto 0px;
+	  -webkit-animation: main 250ms;
+	  -moz-animation: main 250ms;
+	  -ms-animation: main 250ms;
+	  animation: main 250ms;
+	}
+	
+.ribbon i {
+  position: absolute;
+
+}
+
+.ribbon i:first-child, .ribbon i:nth-child(2) {
+  position: absolute;
+  left: -15px;
+  bottom: -15px;
+  z-index: 3;
+  border: 15px solid transparent;
+  border-right-color: #7a1308;
+  
+  -webkit-animation: edge 500ms;
+  -moz-animation: edge 500ms;
+  -ms-animation: edge 500ms;
+  animation: edge 500ms;
+}
+
+.ribbon i:nth-child(2) {
+  left: auto;
+  right: -15px;
+  border-right-color: transparent;
+  border-left-color: #7a1308;
+	 z-index: 4;
+}
+
+.ribbon i:nth-child(3), .ribbon i:last-child {
+  width: 60px !important;
+  bottom: -15px;
+  left: -45px;
+  z-index: 2;
+  border: 20px solid #b7191a;
+  border-left-color: transparent;
+  
+  -webkit-animation: back 600ms;
+  -moz-animation: back 600ms;
+  -ms-animation: back 600ms;
+  animation: back 600ms;
+  
+  -webkit-transform-origin: 100% 0;
+  -moz-transform-origin: 100% 0;
+  -ms-transform-origin: 100% 0;
+  transform-origin: 100% 0;
+}
+
+.ribbon i:last-child {
+  bottom: -15px;
+  left: auto;
+  right: -45px;
+  border: 20px solid #b7191a;
+  border-right-color: transparent;
+ z-index: 3;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+}
+
+p {
+  text-align: center;
+  color: #aaa;
+}
+
+/* animations */
+
+@-webkit-keyframes main {
+  0% { -webkit-transform: scaleX(0); }
+  100% { -webkit-transform: scaleX(1); }
+}
+
+@-webkit-keyframes edge {
+  0%, 50% { -webkit-transform: scaleY(0); }
+  100% { -webkit-transform: scaleY(1); }
+}
+
+@-webkit-keyframes back {
+  0%, 75% { -webkit-transform: scaleX(0); }
+  100% { -webkit-transform: scaleX(1); }
+}
+
+
+@-moz-keyframes main {
+  0% { -moz-transform: scaleX(0); }
+  100% { -moz-transform: scaleX(1); }
+}
+
+@-moz-keyframes edge {
+  0%, 50% { -moz-transform: scaleY(0); }
+  100% { -moz-transform: scaleY(1); }
+}
+
+@-moz-keyframes back {
+  0%, 75% { -moz-transform: scaleX(0); }
+  100% { -moz-transform: scaleX(1); }
+}
+
+
+@keyframes main {
+  0% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+@keyframes edge {
+  0%, 50% { transform: scaleY(0); }
+  100% { transform: scaleY(1); }
+}
+
+@keyframes back {
+  0%, 75% { transform: scaleX(0); }
+  100% { transform: scaleX(1); }
+}
+
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+
+
+<body onclick="clearInterval(carouselEngine)" onscroll="clearInterval(carouselEngine)" style="overflow: auto">
+<!–– START Site Header ––>
+
+<div id="header" style="height: 70px; position: fixed; top: 0px; left: 0px; width: 100%; font-family: headerFont;  z-index:9999">
+
+
+<img src="logo-simple-white.svg" class="headerLogo" alt="logo" style="position: absolute; left: 20px; top: 12px;" height="75" ></img>
+
+<div class="headerText" style="position: absolute;  right: 20px; display:inline-block;top: 20px;" >
+
+
+
+<a target="_blank" class="headerLink"  style='font-size: 24px; display:inline-block;'>Meet<div class="textSpacer" style="width: 8px; display:inline-block;"></div>Phil</a>
+
+<a target="_blank" class="headerLink"  style='font-size: 24px;  display:inline-block;'>The<div class="textSpacer" style="width: 8px; display:inline-block;"></div>Vision</a>
+
+<a target="_blank" class="headerLink"  style='font-size: 24px;  display:inline-block;'>Take<div class="textSpacer" style="width: 8px; display:inline-block;"></div>Action</a>
+
+<a target="_blank" class="headerLink mover"  style='font-size: 24px;  display:inline-block;'>En<div class="textSpacer" style="width: 8px; display:inline-block;"></div>Espanol <img src="Tilde-white.svg" class="tilde" style="position: relative; right: 26px; bottom: 9px;" width="10"></img></a>
+
+<div  target="_blank" class="headerLinkN" href= "https://www.votersforphildodds.org/donate_via_actblue" style='font-size: 24px; display:inline-block;'>Contribute</div>
+	</div>
+</div>
+<!–– END Site Header ––>
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="false" style= "position: relative; left: 0px; width:100%; ">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active" style="border-bottom: 20px solid transparent; border-top: 20px solid transparent"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1" style="border-bottom:  20px solid transparent; border-top:  20px solid transparent"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2" style="border-bottom:  20px solid transparent; border-top:  20px solid transparent"></li>
+  </ol>
+  <div class="carousel-inner" >
+    <div class="carousel-item active">
+      <div class="tile1 philTile" style="height: calc(100vh - 70px); width:100%">
+				<div id="ribbonContainer1" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText1" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> protect our environment</div>
+						   <div id="ribbon1" class="ribbon" style="position: absolute; top: -103px" >
+							  <i></i>
+							  <i></i>
+							  <i></i>
+							  <i></i>
+							</div>
+							<div class = "ribbonBody" style="position: absolute; top: -103px; "></div>
+						</div>
+
+
+							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
+
+							<button class="joinbutton" id="join" onclick="toggleJoin()">Join</button>
+
+                            <button onclick=" window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" class="donatebutton" id="contribute">Contribute</button>
+			</div>
+    </div>
+    <div class="carousel-item">
+       <div class="tile2" style="height: calc(100vh - 70px); width:100%">
+				<div id="ribbonContainer2" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText2" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> fight for rural America</div>
+						   <div id="ribbon2" class="ribbon" style="position: absolute; top: -103px" >
+							  <i></i>
+							  <i></i>
+							  <i></i>
+							  <i></i>
+							</div>
+							<div class = "ribbonBody" style="position: absolute; top: -103px; "></div>
+						</div>
+
+							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
+
+							<button class="joinbutton" id="join">Join</button>
+
+							<button onclick=" window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" class="donatebutton" id="contribute">Contribute</button>
+			</div>
+    </div>
+    <div class="carousel-item">
+      <div class="tile3" style="height: calc(100vh - 70px); width:100%">
+			<div id="ribbonContainer3" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText3" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> invest in public education</div>
+						   <div id="ribbon3" class="ribbon" style="position: absolute; top: -103px" >
+							  <i></i>
+							  <i></i>
+							  <i></i>
+							  <i></i>
+							</div>
+							<div class = "ribbonBody" style="position: absolute; top: -103px; "></div>
+						</div>
+
+							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
+
+							<button class="joinbutton" id="join" onclick="toggleJoin()">Join</button>
+
+							<button onclick=" window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" class="donatebutton" id="contribute">Contribute</button>
+			</div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="">
+   
+  </a>
+</div>
+
+<script>
+	
+	//Main Timer function
+	
+	// var carouselEngine = setInterval(mainTimer, 6000);
+	// Restart Engine
+	function mainTimer() {
+  		$("#carouselExampleIndicators").carousel('next');
+	}
+	
+	
+	$("#carouselExampleIndicators").on('slide.bs.carousel', function (event) {
+		setTimeout(function() {
+			var slideIndex = event.to + 1;
+		$("#ribbonText" + slideIndex).fadeIn(750);
+          var self = $('#ribbon' + slideIndex),
+      newone = self.clone(true);
+  	  self.before(newone);
+		$("#ribbonContainer" + slideIndex).css("display","block");
+  		$("#ribbon" + slideIndex + ":last").remove();
+		$("#ribbonContainer" + (event.from + 1)).css("display","none");
+			$("#ribbonText" + (event.from + 1)).css("display","none");
+    }, 1200);
+});
+	
+	
+$( document ).ready(function() {
+	setTimeout(function() {
+		$("#ribbonText1").fadeIn(750);
+          var self = $('#ribbon1'),
+      newone = self.clone(true);
+  	  self.before(newone);
+		$("#ribbonContainer1").css("display","block");
+  		$("#ribbon1:last").remove();
+    }, 1000);
+ /**
+	setTimeout(function() {
+		$(".logOverlay").fadeIn(1500);
+		var left = $('.logOverlay').position().left;  // Get the calculated left position
+		var start = $('.logOverlay').width();
+		
+		$(".logOverlay").css({left:0})  // Set the left to its calculated position
+				 .animate({"left":(left)}, {duration: 1000, queue: false});
+    }, 2000);
+	
+	
+	**/
+	
+});
+	
+	
+</script>
+<div style="width: 100%; text-align: center; font-size: 30px; color: rgb(42,79,118); position: static; margin-top: 80px;  font-family: Verdana, Geneva, sans-serif;">Our Campaign</div>
+
+<br/>
+<div style="color: rgb(42,79,118); padding-top: 10px; ">
+<div style="margin-left: calc((100% - 1100px) / 2); padding-bottom: 400px;">
+	<div style="float: left">
+		<img class="fadable" src="money.svg" height="150" style="position: relative;  left: calc((100% - 130px) / 2)"></img><br/>
+		<div style="font-size: 21px; margin-top: 20px; text-align: center">
+			<b>No Corporate PAC Money</b>
+		</div>
+		<div style="margin-top: 15px;font-size: 15px; width: 300px" >
+			Phil doesn't just talk about campaign finance, his campaign embodies it. Phil believes in cleaning up our politics and will work to root out corruption every cranny where it exists, even when it its not convinent.
+		</div>
+	</div>
+	<div style="float: left; margin-left: 100px;">
+		<img class="fadable" src="people.svg" height="150" style="position: relative;  left: calc((100% - 270px) / 2)"></img><br/>
+		<div style="font-size: 21px; margin-top: 20px; text-align: center">
+			<b>Centered Around You</b>
+		</div>
+		<div style="margin-top: 15px;font-size: 15px; width: 300px; position: relative; left: 10px" >
+			Phil isn't running for congress to represent billionaires or corporations. Built around an unprecedent level of public input, Phil's campaign is about creating a government that works for everyone.
+		</div>
+		
+	</div>
+	
+	<div style="float: left; margin-left: 100px;">
+		<img class="fadable" src="screwdriver.svg" height="150" style="position: relative;  left: calc((100% - 150px) / 2)"></img><br/>
+		<div style="font-size: 21px; margin-top: 20px; text-align: center">
+			<b>Fixing Partisan Gridlock</b>
+		</div>
+		<div style="margin-top: 15px;font-size: 15px; width: 300px" >
+			As an engineer and former independent, Phil isn't running to promote radical policies meant to divide the country. Phil's campaign is about bringing people together to solve the biggest problems of our generation.
+		</div>
+		
+	</div>
+	</div>
+</div>
+
+<script>
+   var fadeStart=10 // 100px scroll or less will equiv to 1 opacity
+    ,fadeUntil=500 // 200px scroll or more will equiv to 0 opacity
+    ,fading = $('.fadable')
+;
+$(window).bind('scroll', function(){
+console.log($(document).scrollTop());
+    var offset = $(document).scrollTop();
+    var opacity = 0.20;
+  
+    if( offset<=fadeUntil && offset >= fadeStart){
+       opacity= Math.min(0.15 + (offset/fadeUntil),1);
+    }else{
+        opacity=1;
+    }
+    fading.css('opacity',opacity).html(opacity);
+});
+
+</script>
+
+<div style="background-color: rgb(42,79,118); color: white; padding-bottom: 100px">
+<div style="text-align: center; font-size: 30px; padding-top: 10px">Issues</div>
+<br/>
+<br/>
+		<style>
+		.accordion {
+		  color: white;
+		  cursor: pointer;
+		  border: solid 3px white;
+		  width: 450px;
+			padding: 7px;
+		  text-align: left;
+		  outline: none;
+		  font-size: 22px;
+		 margin-left: 3px;
+		  transition: 0.4s;
+		  margin-bottom:10px;
+		}
+
+		.activeAccordian, .accordion:hover {
+		 	 background-color: white;
+			 color: rgb(42,79,118);
+			
+		}
+
+		.accordion:after {
+		  content: '\002B';
+		  color: white;
+		  font-weight: bold;
+		  float: right;
+		  margin-left: 5px;
+		}
+
+		.activeAccordian:after {
+		  content: rgb(42,79,118);
+			
+		}
+
+		.panel {
+		  
+		text-align: center;
+	 	  color: white;
+		  margin-left: 4px;
+		  max-height: 0;
+		  overflow: hidden;
+		  transition: max-height 0.2s ease-out;
+		  width: 450px;
+			
+		}
+		</style>
+		</head>
+		<table style="margin-left: calc((100% - 962px) / 2)">
+		<td style="vertical-align: text-top; padding-right: 50px">
+		<div >
+				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Education</div></div>
+				<div class="panel">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+
+					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Healthcare</div></div>
+				<div class="panel">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+
+					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Union Protections</div></div>
+				<div class="panel">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+		</div>
+		</td>
+		<td style="vertical-align: text-top">
+		<div >
+				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Environment</div></div>
+				<div class="panel">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+
+					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Campaign Finance Reform</div></div>
+				<div class="panel">
+				 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+
+					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Economy</div></div>
+				<div class="panel">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+		</div>
+		</td>
+			</table>
+		<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+			this.classList.toggle("activeAccordian");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+			  panel.style.maxHeight = null;
+				panel.style.marginBottom = 0;
+			} else {
+			  panel.style.maxHeight = panel.scrollHeight + "px";
+			  panel.style.marginBottom = 15;
+			} 
+		  });
+		}
+		</script>
+
+</div>
+</div>
+<div style="text-align: center; font-size: 30px; padding-top: 10px; color: rgb(42,79,118)">Get Involved</div>
+<br/>
+
+<div id="eventsHolder"></div>
+
+<script>
+	function addItem()
+	{
+		var spacer = document.createElement("br");
+		var div = document.createElement("div");
+			div.style= "font-size: 19px; margin-left: 20%; color: black; height: 85px";
+
+			var innerDIV = document.createElement("div");
+				innerDIV.style="float: left";
+			var title = document.createElement("span");
+				title.innerHTML = "<b>Event Name</b>: Meet 'n Greet</br>";
+			var date = document.createElement("span");
+				date.innerHTML = "<b>Date</b>: 10/21/2019</br>";
+			var time = document.createElement("span");
+				time.innerHTML = "<b>Time</b>: 6:00 PM - 8:00 PM</br>";
+
+			var signUP = document.createElement("div");
+				signUP.style = "float: right; background-color: red; width: 140px; height: 40px; position: absolute; margin-top:22px; right: 20%; color: white;";
+				signUP.innerHTML="<b><div style='text-align: center; position: relative; top: 5px'>Sign Up</div></b>";
+
+		innerDIV.appendChild(title);
+		innerDIV.appendChild(date);
+		innerDIV.appendChild(time);
+		div.appendChild(innerDIV);
+		div.appendChild(signUP);
+		document.getElementById("eventsHolder").appendChild(div);
+		document.getElementById("eventsHolder").appendChild(spacer);
+		
+	}
+	
+	addItem();
+	addItem();
+	addItem();
+</script>
+
+<br/><br/>
+
+<footer>
+<div style="margin-left: 20%">
+<div style="display: inline-block">	
+	<img src="logo-blue.svg" style="display: inline-block; position: relative; bottom: 50px" height="200"></img>
+	<div style="margin-left: 20px; background-color: rgb(42,79,118); width: 7px; height: 200px; display: inline-block; position: relative; top: 50px"></div>
+</div>
+
+<div style="font-family: headerFont; font-weight: bold; display: inline-block; color: rgb(42,79,118); font-size: 32px; position: relative; bottom: 100px; margin-left: 20px">
+	Stay<div  style="width: 6px; display:inline-block;"></div>in<div style="width: 6px; display:inline-block;"></div>touch:
+
+</div>
+
+<div style="display: inline-block; position: relative; right: 145px; bottom: 20px">
+	<img src="facebook.svg" height="50" style="margin-right: 10px"></img>	
+	<img src="twitter.svg" height="50" style="margin-right: 10px"></img>	
+	<img src="instagram.svg" height="50"></img>
+</div>
+
+<div style="color: rgb(42,79,118); display: inline-block; border: 3px solid rgb(42,79,118); position: absolute; right: 20%; margin-top: 100px; padding: 10px; font-size: 25px; font-family: headerFont;">Paid<div  style="width: 4px; display:inline-block;"></div>for<div  style="width: 4px; display:inline-block;"></div>by<div  style="width: 4px; display:inline-block;"></div>Voters<div  style="width: 4px; display:inline-block;"></div>for<div  style="width: 4px; display:inline-block;"></div>Phil<div  style="width: 4px; display:inline-block;"></div>Dodds</div>
+</div>
+
+
+	
+	
+	
+</footer>
+
+<style>
+.phil_door {
+    background-image: url("Phil_Door.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 20% 50%;
+    width: 100%;
+   height: 40%;
+}
+</style>
+<div id="overlay" style="position: fixed; width: 100vw; height: 100vh; background-color: rgba(0,0,0,0.8); top: 0px; left: 0px; z-index:9999999; overflow: hidden; display: none" onclick="toggleJoin()">
+
+<div id="join-popup" style="background-color: white; width: 500px; height: 90%; box-shadow: 7px 7px 7px black; position: fixed; left: calc((100% - 500px) /2); top: 5%; display: none" onclick="event.stopPropagation();">
+
+<div class="phil_door"></div>
+<div style="margin-left: 20px; margin-right: 20px">
+<br/><div style="width; 100%; text-align: center; font-size: 24">Be Part of the Solution</div>
+<br/>We need door knockers, house part hosts, visionaries, and signiture gatherers. We need mothers, and daughters, workers, fathers. We need people who care and want to make a difference.
+
+
+<br/><div style="width; 100%; text-align: center; font-size: 18"><b>We need you.</b></div>
+<br/>
+<form>
+<div style="display: inline-block">Name:</div> <input id="name" style="display: inline-block; position: absolute; left: 70px;width: 400px"></input></div>
+<div style"height:50px; width: 5px">
+<div style="display: inline-block; position: relative; left: 20px;">Email:</div> <input id="email" style="display: inline-block; position: absolute; left: 70px; width:400px"></input>
+<br/>
+<submit class="joinbutton" style="position: relative; left: 130px !important; top: 30px" ><div style="margin-top: 5px; ">Join</div></submit>
+
+</form>
+
+<script>
+
+function toggleJoin()
+{
+	$("#overlay").toggle();
+	$("#join-popup").toggle();
+
+	if ($("#overlay").css("display") == "none")
+{
+document.body.style="overflow: hidden";
+}
+else
+{
+document.body.style="overflow: auto";
+}
+
+}
+
+</script>
+</div>
+</div>
+
+</div>
+</body>
