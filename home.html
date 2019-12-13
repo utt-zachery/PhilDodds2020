@@ -623,15 +623,64 @@ console.log($(document).scrollTop());
 </script>
 
 
-<div style="background-color: rgb(42,79,118); color: white; padding-bottom: 100px">
-<div style="text-align: center; font-size: 30px; padding-top: 20px">The Vision</div>
+<div class="meetPhil" style="height: 500px"></div>
+
+</div>
+</div>
+
 <br/>
+<div style="text-align: center; font-size: 30px; padding-top: 20px; color: rgb(42,79,118); display: inline-block; width: 100%">Get Involved</div>
+
 <br/>
-		<style>
+
+<div style="width: 100%; ">
+<div id="eventsHolder" style="display: inline-block; width: 100%;"></div>
+
+</div>
+<br/>
+<script>
+	function addItem()
+	{
+		var spacer = document.createElement("br");
+		var div = document.createElement("div");
+			div.style= "font-size: 19px; margin-left: 20%; color: black; height: 85px";
+
+			var innerDIV = document.createElement("div");
+				innerDIV.style="float: left";
+			var title = document.createElement("span");
+				title.innerHTML = "<b>Event Name</b>: Meet 'n Greet</br>";
+			var date = document.createElement("span");
+				date.innerHTML = "<b>Date</b>: 10/21/2019</br>";
+			var time = document.createElement("span");
+				time.innerHTML = "<b>Time</b>: 6:00 PM - 8:00 PM</br>";
+
+			var signUP = document.createElement("div");
+				signUP.style = "float: right; background-color: red; width: 140px; height: 40px; position: relative; margin-top:22px; right: 20%; color: white;";
+				signUP.innerHTML="<b><div style='text-align: center; position: relative; top: 5px'>Sign Up</div></b>";
+
+		innerDIV.appendChild(title);
+		innerDIV.appendChild(date);
+		innerDIV.appendChild(time);
+		div.appendChild(innerDIV);
+		div.appendChild(signUP);
+		document.getElementById("eventsHolder").appendChild(div);
+		document.getElementById("eventsHolder").appendChild(spacer);
+		
+	}
+	
+	addItem();
+	addItem();
+	addItem();
+</script>
+
+<br/><br/>
+
+
+<style>
 		.accordion {
 		  color: white;
 		  cursor: pointer;
-		  border: solid 3px white;
+		  border: solid 3px rgb(42,79,118);
 		  width: 450px;
 			padding: 7px;
 		  text-align: left;
@@ -639,7 +688,8 @@ console.log($(document).scrollTop());
 		  font-size: 22px;
 		 margin-left: 3px;
 		  transition: 0.4s;
-		  margin-bottom:10px;
+		  margin-bottom: 10px;
+			background-color: rgb(42,79,118);
 		}
 
 		.activeAccordian, .accordion:hover {
@@ -663,8 +713,8 @@ console.log($(document).scrollTop());
 
 		.panel {
 		  
-		text-align: center;
-	 	  color: white;
+		 text-align: center;
+	 	  color: rgb(42,79,118);
 		  margin-left: 4px;
 		  max-height: 0;
 		  overflow: hidden;
@@ -674,9 +724,6 @@ console.log($(document).scrollTop());
 		}
 		</style>
 		</head>
-		
-		
-	
 		<table style="margin-left: calc((100% - 962px) / 2)">
 		<td style="vertical-align: text-top; padding-right: 50px">
 		<div >
@@ -733,62 +780,7 @@ console.log($(document).scrollTop());
 		  });
 		}
 		</script>
-
-</div>
-</div>
-
-<br/>
-<div style="text-align: center; font-size: 30px; padding-top: 20px; color: rgb(42,79,118); display: inline-block; width: 100%">Get Involved</div>
-
-<br/>
-
-<div style="width: 100%; ">
-<div id="eventsHolder" style="display: inline-block; width: 100%;"></div>
-
-</div>
-<br/>
-<script>
-	function addItem()
-	{
-		var spacer = document.createElement("br");
-		var div = document.createElement("div");
-			div.style= "font-size: 19px; margin-left: 20%; color: black; height: 85px";
-
-			var innerDIV = document.createElement("div");
-				innerDIV.style="float: left";
-			var title = document.createElement("span");
-				title.innerHTML = "<b>Event Name</b>: Meet 'n Greet</br>";
-			var date = document.createElement("span");
-				date.innerHTML = "<b>Date</b>: 10/21/2019</br>";
-			var time = document.createElement("span");
-				time.innerHTML = "<b>Time</b>: 6:00 PM - 8:00 PM</br>";
-
-			var signUP = document.createElement("div");
-				signUP.style = "float: right; background-color: red; width: 140px; height: 40px; position: relative; margin-top:22px; right: 20%; color: white;";
-				signUP.innerHTML="<b><div style='text-align: center; position: relative; top: 5px'>Sign Up</div></b>";
-
-		innerDIV.appendChild(title);
-		innerDIV.appendChild(date);
-		innerDIV.appendChild(time);
-		div.appendChild(innerDIV);
-		div.appendChild(signUP);
-		document.getElementById("eventsHolder").appendChild(div);
-		document.getElementById("eventsHolder").appendChild(spacer);
-		
-	}
-	
-	addItem();
-	addItem();
-	addItem();
-</script>
-
 <br/><br/>
-
-<div class="meetPhil" style="height: 500px">
-	
-	
-</div><br/><br/>
-
 
 <footer >
 
