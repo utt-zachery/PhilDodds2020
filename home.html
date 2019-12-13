@@ -4,8 +4,10 @@
 	
 	.philTile
 	{
-	background-size: cover;
-    background-repeat: no-repeat;
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 100vh; 
+		width:100%
 	}
 	
 	.headerLink {
@@ -397,9 +399,13 @@ p {
 
 
 <body onclick="clearInterval(carouselEngine)" onscroll="clearInterval(carouselEngine)" style="overflow: auto">
+
+	<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
+	
 <!–– START Site Header ––>
 
-<div id="header" style="height: 70px; position: fixed; top: 0px; left: 0px; width: 100%; font-family: headerFont;  z-index:9999">
+<div id="header" style="height: 70px; position: absolute; top: 0px; left: 0px; width: 100%; font-family: headerFont;  z-index:9999">
 
 
 <img src="logo-simple-white.svg" class="headerLogo" alt="logo" style="position: absolute; left: 20px; top: 12px;" height="75" ></img>
@@ -430,7 +436,7 @@ p {
   </ol>
   <div class="carousel-inner" >
     <div class="carousel-item active">
-      <div class="tile1 philTile" style="height: calc(100vh - 70px); width:100%">
+      <div class="tile1 philTile">
 				<div id="ribbonContainer1" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText1" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> protect our environment</div>
 						   <div id="ribbon1" class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
@@ -450,7 +456,7 @@ p {
 			</div>
     </div>
     <div class="carousel-item">
-       <div class="tile2" style="height: calc(100vh - 70px); width:100%">
+       <div class="tile2 philTile" >
 				<div id="ribbonContainer2" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText2" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> fight for rural America</div>
 						   <div id="ribbon2" class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
@@ -484,7 +490,7 @@ p {
 
 							<button class="joinbutton" id="join" onclick="toggleJoin()">Join</button>
 
-							<button onclick=" window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" class="donatebutton" id="contribute">Contribute</button>
+							<button onclick="window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" class="donatebutton" id="contribute">Contribute</button>
 			</div>
     </div>
   </div>
@@ -548,18 +554,18 @@ $( document ).ready(function() {
 	
 	
 </script>
-<div style="width: 100%; text-align: center; font-size: 30px; color: rgb(42,79,118); position: static; margin-top: 80px;  font-family: Verdana, Geneva, sans-serif;">Our Campaign</div>
+<div style="width: 100%; text-align: center; font-size: 30px; color: rgb(42,79,118); position: static; margin-top: 30px;  font-family: Verdana, Geneva, sans-serif;margin-bottom: 15px">Our Values</div>
 
 <br/>
-<div style="color: rgb(42,79,118); padding-top: 10px; ">
-<div style="margin-left: calc((100% - 1100px) / 2); padding-bottom: 400px;">
+<div style="color: rgb(42,79,118); padding-top: 10px; margin-bottom: 100px;">
+<div style="margin-left: calc((100% - 1250px) / 2); padding-bottom: 420px;">
 	<div style="float: left">
 		<img class="fadable" src="money.svg" height="150" style="position: relative;  left: calc((100% - 130px) / 2)"></img><br/>
 		<div style="font-size: 21px; margin-top: 20px; text-align: center">
 			<b>No Corporate PAC Money</b>
 		</div>
-		<div style="margin-top: 15px;font-size: 15px; width: 300px" >
-			Phil doesn't just talk about campaign finance, his campaign embodies it. Phil believes in cleaning up our politics and will work to root out corruption every cranny where it exists, even when it its not convinent.
+		<div style="margin-top: 20px;font-size: 18px; width: 350px;text-align: center" >
+			This Campaign is about people not PACs.  Phil cares about cleaning up politics and will create and support legislation that is in your interest instead of corporate interests.  People powered government begins with campaign finance, and his campaign embodies it.
 		</div>
 	</div>
 	<div style="float: left; margin-left: 100px;">
@@ -567,8 +573,9 @@ $( document ).ready(function() {
 		<div style="font-size: 21px; margin-top: 20px; text-align: center">
 			<b>Centered Around You</b>
 		</div>
-		<div style="margin-top: 15px;font-size: 15px; width: 300px; position: relative; left: 10px" >
-			Phil isn't running for congress to represent billionaires or corporations. Built around an unprecedent level of public input, Phil's campaign is about creating a government that works for everyone.
+		<div style="margin-top: 20px;font-size: 18px; width: 350px; position: relative; left: 5px;text-align: center" >
+			Phil's campaign is about creating a government that works for everyone. With a focus on Liberty,
+Personal Responsibility, Diversity, Rule, of, by, and for the People, and a commitment to the Education and Encouragement of younger generations, Phil is working to represent you.  
 		</div>
 		
 	</div>
@@ -578,8 +585,10 @@ $( document ).ready(function() {
 		<div style="font-size: 21px; margin-top: 20px; text-align: center">
 			<b>Fixing Partisan Gridlock</b>
 		</div>
-		<div style="margin-top: 15px;font-size: 15px; width: 300px" >
-			As an engineer and former independent, Phil isn't running to promote radical policies meant to divide the country. Phil's campaign is about bringing people together to solve the biggest problems of our generation.
+		<div style="margin-top: 20px;font-size: 18px; width: 350px;text-align: center" >
+		As an Engineer and a former Independent, Phil's campaign is about bringing people together
+and solving our biggest problems. While we work hard and provide for our families, we must also look out for each other. Phil is campaigning
+to find solutions instead of fighting politicts.
 		</div>
 		
 	</div>
@@ -607,7 +616,7 @@ console.log($(document).scrollTop());
 </script>
 
 <div style="background-color: rgb(42,79,118); color: white; padding-bottom: 100px">
-<div style="text-align: center; font-size: 30px; padding-top: 10px">Issues</div>
+<div style="text-align: center; font-size: 30px; padding-top: 20px">The Vision</div>
 <br/>
 <br/>
 		<style>
@@ -716,11 +725,36 @@ console.log($(document).scrollTop());
 
 </div>
 </div>
-<div style="text-align: center; font-size: 30px; padding-top: 10px; color: rgb(42,79,118)">Get Involved</div>
+
+
+<div style="text-align: center; font-size: 30px; padding-top: 20px; color: rgb(42,79,118); display: inline-block; width: 100%">Get Involved</div>
+
 <br/>
 
-<div id="eventsHolder"></div>
+<div style="width: 100%; overflow: hidden">
+<div id="eventsHolder" style="display: inline-block; width: 70%;"></div>
 
+<div style="display: inline-block; width: 20%">
+
+		
+				<div class="fb-page" 
+			 data-href="https://www.facebook.com/VotersForPhilDodds/" 
+			 data-tabs="timeline" 
+			 data-small-header="false" 
+			 data-adapt-container-width="true" 
+			 data-hide-cover="false" 
+			 data-show-facepile="true">
+		  <div class="fb-xfbml-parse-ignore">
+			<blockquote cite="https://www.facebook.com/facebook">
+			  <a href="https://www.facebook.com/facebook">Facebook</a>
+			</blockquote>
+		  </div>
+		</div>
+
+
+</div>
+</div>
+<br/>
 <script>
 	function addItem()
 	{
@@ -738,7 +772,7 @@ console.log($(document).scrollTop());
 				time.innerHTML = "<b>Time</b>: 6:00 PM - 8:00 PM</br>";
 
 			var signUP = document.createElement("div");
-				signUP.style = "float: right; background-color: red; width: 140px; height: 40px; position: absolute; margin-top:22px; right: 20%; color: white;";
+				signUP.style = "float: right; background-color: red; width: 140px; height: 40px; position: relative; margin-top:22px; right: 10px; color: white;";
 				signUP.innerHTML="<b><div style='text-align: center; position: relative; top: 5px'>Sign Up</div></b>";
 
 		innerDIV.appendChild(title);
@@ -809,7 +843,7 @@ console.log($(document).scrollTop());
 <br/>
 <form>
 <div style="display: inline-block">Name:</div> <input id="name" style="display: inline-block; position: absolute; left: 70px;width: 400px"></input></div>
-<div style"height:50px; width: 5px">
+<div style="height:50px; width: 5px">
 <div style="display: inline-block; position: relative; left: 20px;">Email:</div> <input id="email" style="display: inline-block; position: absolute; left: 70px; width:400px"></input>
 <br/>
 <submit class="joinbutton" style="position: relative; left: 130px !important; top: 30px" ><div style="margin-top: 5px; ">Join</div></submit>
