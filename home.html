@@ -2,6 +2,52 @@
 
 <style>
 	
+		.accordion {
+		  color: white;
+		  cursor: pointer;
+		  border: solid 3px rgb(42,79,118);
+		  width: 450px;
+			padding: 7px;
+		  text-align: left;
+		  outline: none;
+		  font-size: 22px;
+		 margin-left: 3px;
+		  transition: 0.4s;
+		  margin-bottom: 10px;
+			background-color: rgb(42,79,118);
+		}
+
+		.activeAccordian, .accordion:hover {
+		 	 background-color: white;
+			 color: rgb(42,79,118);
+			
+		}
+
+		.accordion:after {
+		  content: '\002B';
+		  color: white;
+		  font-weight: bold;
+		  float: right;
+		  margin-left: 5px;
+		}
+
+		.activeAccordian:after {
+		  content: rgb(42,79,118);
+			
+		}
+
+		.panel {
+		  
+		 text-align: center;
+	 	  color: rgb(42,79,118);
+		  margin-left: 4px;
+		  max-height: 0;
+		  overflow: hidden;
+		  transition: max-height 0.2s ease-out;
+		  width: 450px;
+			
+		}
+		
 	.meetPhil {
 		background-size: cover;
 		background-repeat: no-repeat;
@@ -23,7 +69,9 @@
   text-decoration: none;	
 }
 	.headerLinkN {
-	margin-left: 15px;
+	font-size: 24px; 
+	display:inline-block;
+	cursor: pointer;
    color:  white !important;
   text-decoration: none;	
 		padding-left: 20px;
@@ -34,10 +82,27 @@
 		 transition: 0.2s ease-in;
 }
 
+.donateMiniButton {
+	font-size: 14px; 
+	display:inline-block;
+	cursor: pointer;
+   color:  white !important;
+  text-decoration: none;	
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-color: rgba(255, 0, 0, 0.85);
+		 transition: 0.2s ease-in;
+}
+
 	div.headerLinkN:hover {
 		background-color: rgba(255, 0, 0, 1);
 	}
 	
+	div.donateMiniButton:hover {
+		background-color: rgba(255, 0, 0, 1);
+	}
 	
 div.tile3 {
   z-index: -10;
@@ -429,7 +494,7 @@ p {
 
 <a target="_blank" class="headerLink mover"  style='font-size: 24px;  display:inline-block;'>En<div class="textSpacer" style="width: 8px; display:inline-block;"></div>Espanol <img src="Tilde-white.svg" class="tilde" style="position: relative; right: 26px; bottom: 9px;" width="10"></img></a>
 
-<div target="_blank" class="headerLinkN" onclick="window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" style='font-size: 24px; display:inline-block;cursor: pointer;'>Contribute</div>
+<div target="_blank" class="headerLinkN" onclick="window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" style='margin-left: 15px;'>Contribute</div>
 	</div>
 </div>
 <!–– END Site Header ––>
@@ -561,9 +626,8 @@ $( document ).ready(function() {
 	
 	
 </script>
-<div style="width: 100%; text-align: center; font-size: 30px; color: rgb(42,79,118); position: static; margin-top: 30px;  font-family: Verdana, Geneva, sans-serif;margin-bottom: 15px">Our Values</div>
+<div style="width: 100%; text-align: center; font-size: 30px; color: rgb(42,79,118); position: static; margin-top: 20px;  font-family: Verdana, Geneva, sans-serif;margin-bottom: 15px">Our Values</div>
 
-<br/>
 <div style="color: rgb(42,79,118); padding-top: 10px; margin-bottom: 80px;">
 <div style="margin-left: calc((100% - 1250px) / 2); padding-bottom: 420px;">
 	<div style="float: left">
@@ -622,14 +686,85 @@ console.log($(document).scrollTop());
 
 </script>
 
+<div style="background-color: #f1f1f1; padding-bottom: 60px; padding-top: 20px">
+<div style="width: 100%; text-align: center; font-size: 30px; color: rgb(42,79,118); position: static;  font-family: Verdana, Geneva, sans-serif;margin-bottom: 35px">The Vision</div>
 
+		<table style="margin-left: calc((100% - 962px) / 2)">
+		<td style="vertical-align: text-top; padding-right: 50px">
+		<div >
+				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Education</div></div>
+				<div class="panel">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+
+					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Healthcare</div></div>
+				<div class="panel">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+
+					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Union Protections</div></div>
+				<div class="panel">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+				
+				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Union Protections</div></div>
+				<div class="panel">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+		</div>
+		</td>
+		<td style="vertical-align: text-top">
+		<div >
+				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Environment</div></div>
+				<div class="panel">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+
+					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Campaign Finance Reform</div></div>
+				<div class="panel">
+				 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+
+					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Economy</div></div>
+				<div class="panel">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+				
+				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Union Protections</div></div>
+				<div class="panel">
+				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				</div>
+		</div>
+		</td>
+			</table>
+		<script>
+		var acc = document.getElementsByClassName("accordion");
+		var i;
+
+		for (i = 0; i < acc.length; i++) {
+		  acc[i].addEventListener("click", function() {
+			this.classList.toggle("activeAccordian");
+			var panel = this.nextElementSibling;
+			if (panel.style.maxHeight) {
+			  panel.style.maxHeight = null;
+				panel.style.marginBottom = 0;
+			} else {
+			  panel.style.maxHeight = panel.scrollHeight + "px";
+			  panel.style.marginBottom = 15;
+			} 
+		  });
+		}
+		</script>
+		
+
+		</div>
 <div class="meetPhil" style="height: 500px"></div>
 
 </div>
 </div>
 
-<br/>
-<div style="text-align: center; font-size: 30px; padding-top: 20px; color: rgb(42,79,118); display: inline-block; width: 100%">Get Involved</div>
+
+<div style="text-align: center; font-size: 30px; padding-top: 20px; color: rgb(42,79,118); display: inline-block; width: 100%; margin-bottom:25px">Get Involved</div>
 
 <br/>
 
@@ -675,115 +810,21 @@ console.log($(document).scrollTop());
 
 <br/><br/>
 
-
-<style>
-		.accordion {
-		  color: white;
-		  cursor: pointer;
-		  border: solid 3px rgb(42,79,118);
-		  width: 450px;
-			padding: 7px;
-		  text-align: left;
-		  outline: none;
-		  font-size: 22px;
-		 margin-left: 3px;
-		  transition: 0.4s;
-		  margin-bottom: 10px;
-			background-color: rgb(42,79,118);
-		}
-
-		.activeAccordian, .accordion:hover {
-		 	 background-color: white;
-			 color: rgb(42,79,118);
-			
-		}
-
-		.accordion:after {
-		  content: '\002B';
-		  color: white;
-		  font-weight: bold;
-		  float: right;
-		  margin-left: 5px;
-		}
-
-		.activeAccordian:after {
-		  content: rgb(42,79,118);
-			
-		}
-
-		.panel {
-		  
-		 text-align: center;
-	 	  color: rgb(42,79,118);
-		  margin-left: 4px;
-		  max-height: 0;
-		  overflow: hidden;
-		  transition: max-height 0.2s ease-out;
-		  width: 450px;
-			
-		}
-		</style>
-		</head>
-		<table style="margin-left: calc((100% - 962px) / 2)">
-		<td style="vertical-align: text-top; padding-right: 50px">
-		<div >
-				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Education</div></div>
-				<div class="panel">
-				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</div>
-
-					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Healthcare</div></div>
-				<div class="panel">
-				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</div>
-
-					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Union Protections</div></div>
-				<div class="panel">
-				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</div>
-		</div>
-		</td>
-		<td style="vertical-align: text-top">
-		<div >
-				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Environment</div></div>
-				<div class="panel">
-				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</div>
-
-					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Campaign Finance Reform</div></div>
-				<div class="panel">
-				 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</div>
-
-					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Economy</div></div>
-				<div class="panel">
-				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-				</div>
-		</div>
-		</td>
-			</table>
-		<script>
-		var acc = document.getElementsByClassName("accordion");
-		var i;
-
-		for (i = 0; i < acc.length; i++) {
-		  acc[i].addEventListener("click", function() {
-			this.classList.toggle("activeAccordian");
-			var panel = this.nextElementSibling;
-			if (panel.style.maxHeight) {
-			  panel.style.maxHeight = null;
-				panel.style.marginBottom = 0;
-			} else {
-			  panel.style.maxHeight = panel.scrollHeight + "px";
-			  panel.style.marginBottom = 15;
-			} 
-		  });
-		}
-		</script>
-<br/><br/>
-
 <footer >
+<div style="width: 100%; text-align: center; font-size: 30px; color: rgb(42,79,118); position: static;  font-family: Verdana, Geneva, sans-serif;margin-bottom: 20px">Contribute</div>
 
+
+
+<div style="text-align: center;">
+	<div class="donateMiniButton" style=" display: inline-block;">$2</div>
+	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;">$5</div>
+		<div class="donateMiniButton" style=" display: inline-block;margin-left: 10px;">$10</div>
+	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;">$15</div>
+	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;">$25</div>
+	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;">$50</div>
+</div>
+
+<br/>
 	<div style="background-color: rgb(42,79,118); color:white; height: 250px;">
 		
 			<img src="logo-white.svg" height="200" style="position: relative; top: 25px; padding-left: 80px"></img>
