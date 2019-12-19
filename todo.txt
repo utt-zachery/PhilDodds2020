@@ -5,3 +5,4 @@ TODO:
 = link events to google API
 = join butoon
 = resizing for the accordions and the 3 icons
+25919
