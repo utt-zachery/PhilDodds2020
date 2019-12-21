@@ -13,7 +13,7 @@
 		  font-size: 22px;
 		 margin-left: 3px;
 		  transition: 0.4s;
-		  margin-bottom: 10px;
+		  margin-bottom: 15px;
 			background-color: rgb(42,79,118);
 		}
 
@@ -31,10 +31,17 @@
 		  margin-left: 5px;
 		}
 
-		.activeAccordian:after {
-		  content: rgb(42,79,118);
+		.accordion:hover:after {
+		  content: '\002B';
+		  color: rgb(42,79,118);
 			
 		}
+
+
+		.displayedAccordion:after {
+			content: '\2212' !important;
+		}
+
 
 		.panel {
 		  
@@ -49,7 +56,7 @@
 		}
 		
 	.meetPhil {
-		background-size: cover;
+		background-size: contain;
 		background-repeat: no-repeat;
 		width:100%;
 		background-image: url("Meet Phil.png");
@@ -739,29 +746,58 @@ console.log($(document).scrollTop());
 			</table>
 		<script>
 		var acc = document.getElementsByClassName("accordion");
+		
 		var i;
 
 		for (i = 0; i < acc.length; i++) {
-		  acc[i].addEventListener("click", function() {
-			this.classList.toggle("activeAccordian");
-			var panel = this.nextElementSibling;
-			if (panel.style.maxHeight) {
-			  panel.style.maxHeight = null;
-				panel.style.marginBottom = 0;
-			} else {
-			  panel.style.maxHeight = panel.scrollHeight + "px";
-			  panel.style.marginBottom = 15;
-			} 
+		
+		    acc[i].addEventListener("click", function() {
+				var active = document.getElementsByClassName("panel");
+				for (var a = 0; a < active.length; a++) {
+						var panel2 = active[a];
+						acc[a].classList.remove("displayedAccordion");
+						if (panel2 != this.nextElementSibling)
+						{
+							panel2.style.maxHeight = null;
+							panel2.style.marginBottom = 0;
+						}
+				}
+				
+				var panel = this.nextElementSibling;
+				if (panel.style.maxHeight) {
+						panel.style.maxHeight = null;
+						panel.style.marginBottom = 0;
+						 this.classList.remove("displayedAccordion");
+				} else {
+					  panel.style.maxHeight = panel.scrollHeight + "px";
+					  panel.style.marginBottom = 15;
+					  this.classList.add("displayedAccordion");
+				} 
 		  });
 		}
 		</script>
-		
+		<br/>See All Issues
 
 		</div>
-<div class="meetPhil" style="height: 500px"></div>
-
-</div>
-</div>
+	<div class="meetPhil" style="color: white; height: 51.23vw">
+	
+		<div style="height: 100%; width: 100%">
+				<div style="position: relative; font-size: 55px; width: 230px;top: 15%; left: 40%; left: calc(13% + ((64% - 110px) / 2)">
+				Meet Phil
+				</div>
+			<br/>
+				<div style="position: relative; font-size: 34px; width: 37%; text-shadow: 2px 2px black; height: 27%; top: calc(-110px + 35%); left: 37%; display: table">
+				<div style="display: table-cell; vertical-align: middle;">
+				As a father, an enginner, and a problem solver. <b>#philWill</b> bring his work ethic to Congress.
+				</div>
+				</div>
+		
+		</div>
+		
+	
+	
+	
+	</div>
 
 
 <div style="text-align: center; font-size: 30px; padding-top: 20px; color: rgb(42,79,118); display: inline-block; width: 100%; margin-bottom:25px">Get Involved</div>
