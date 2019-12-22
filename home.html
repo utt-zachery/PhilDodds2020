@@ -89,6 +89,20 @@
 		 transition: 0.2s ease-in;
 }
 
+.learnMore {
+font-size: 22px; 
+	display:inline-block;
+	cursor: pointer;
+   color:  white !important;
+  text-decoration: none;	
+		padding-left: 38px;
+		padding-right: 38px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		background-color: rgba(42,79,118);
+		 transition: 0.2s ease-in;
+}
+
 .donateMiniButton {
 	font-size: 14px; 
 	display:inline-block;
@@ -103,6 +117,10 @@
 		 transition: 0.2s ease-in;
 }
 
+div.learnMore:hover {
+		background-color: rgba(46,87,130);
+	}
+	
 	div.headerLinkN:hover {
 		background-color: rgba(255, 0, 0, 1);
 	}
@@ -477,7 +495,7 @@ p {
 </head>
 
 
-<body onclick="clearInterval(carouselEngine)" onscroll="clearInterval(carouselEngine)" style="overflow: auto">
+<body onclick="clearInterval(carouselEngine)" onscroll="clearInterval(carouselEngine)" style="overflow: auto" onresize="reSize()">
 
 	<div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
@@ -608,6 +626,7 @@ p {
 	
 	
 $( document ).ready(function() {
+reSize();
 	setTimeout(function() {
 		$("#ribbonText1").fadeIn(750);
           var self = $('#ribbon1'),
@@ -779,22 +798,65 @@ console.log($(document).scrollTop());
 		<br/>See All Issues
 
 		</div>
-	<div class="meetPhil" style="color: white; height: 51.23vw">
+	<div class="meetPhil" style="color: white; height: 0px; padding-bottom: 51.23%">
 	
 		<div style="height: 100%; width: 100%">
-				<div style="position: relative; font-size: 55px; width: 230px;top: 15%; left: 40%; left: calc(13% + ((64% - 110px) / 2)">
+				
+				<div style="position: absolute; text-shadow: 3px 3px 5px black; display: table; padding-top: 12%" id="target-parent">
+				<div style="display: table-cell; vertical-align: middle;" id='target-location2'>
 				Meet Phil
 				</div>
-			<br/>
-				<div style="position: relative; font-size: 34px; width: 37%; text-shadow: 2px 2px black; height: 27%; top: calc(-110px + 35%); left: 37%; display: table">
-				<div style="display: table-cell; vertical-align: middle;">
-				As a father, an enginner, and a problem solver. <b>#philWill</b> bring his work ethic to Congress.
+				</div>
+				
+				<div style="position: absolute; text-shadow: 3px 3px 5px black; height: 27%; left: 38%; display: table; padding-top: 19%">
+				<div style="display: table-cell; vertical-align: middle;" id='target-location'>
+				As a father, an enginner, and a<br/>problem solver, <b>#philWill</b> bring<br/>his work ethic to Congress.
 				</div>
 				</div>
-		
+				
+				<div class="learnMore" style="position: relative;  left: calc(38% + ((35% - 160px) / 2));  margin-top: 35%">Learn More</div>
+				
 		</div>
 		
+	<script>
+	function reSize()
+	{
+		var size = 100;
+		var desired_width = window.innerWidth * 0.35;
+		var resizer = $("#hidden-resizer");
+		resizer.css("font-size",100);
+		resizer.html(document.getElementById("target-location").innerHTML);
+
+		while(resizer.width() > desired_width) {
+		  size = parseInt(resizer.css("font-size"), 10);
+		  resizer.css("font-size", size - 1);
+		}
+
+		$("#target-location").css("font-size", size).html(resizer.html());
+		reSize2();
+		
+	}
 	
+	function reSize2()
+	{
+		var size = 100;
+		var desired_width = window.innerWidth * 0.15;
+		var resizer = $("#hidden-resizer");
+		resizer.css("font-size",100);
+		resizer.html(document.getElementById("target-location2").innerHTML);
+
+		while(resizer.width() > desired_width) {
+		  size = parseInt(resizer.css("font-size"), 10);
+		  resizer.css("font-size", size - 1);
+		}
+
+		$("#target-location2").css("font-size", size).html(resizer.html());
+		
+		var rect = document.getElementById("target-location").getBoundingClientRect();
+		$("#target-parent").css("left", rect.left + (((rect.right - rect.left) - resizer.width()) / 2));
+		
+	}
+</script>
 	
 	
 	</div>
@@ -925,4 +987,5 @@ document.body.style="overflow: auto";
 </div>
 
 </div>
+<div id="hidden-resizer" style="visibility: hidden; display: none"></div>
 </body>
