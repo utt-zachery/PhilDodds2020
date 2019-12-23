@@ -99,7 +99,7 @@ font-size: 22px;
 		padding-right: 38px;
 		padding-top: 12px;
 		padding-bottom: 12px;
-		background-color: rgba(42,79,118);
+		background-color: rgb(42,79,118);
 		 transition: 0.2s ease-in;
 }
 
@@ -113,7 +113,7 @@ font-size: 22px;
 		padding-right: 25px;
 		padding-top: 5px;
 		padding-bottom: 5px;
-		background-color: rgba(255, 0, 0, 0.85);
+		background-color: rgb(255, 0, 0, 0.85);
 		 transition: 0.2s ease-in;
 }
 
@@ -798,7 +798,7 @@ console.log($(document).scrollTop());
 		<br/>See All Issues
 
 		</div>
-	<div class="meetPhil" style="color: white; height: 0px; padding-bottom: 51.23%">
+	<div class="meetPhil" style="color: white; height: 0px; padding-bottom: 51.029%">
 	
 		<div style="height: 100%; width: 100%">
 				
@@ -808,13 +808,13 @@ console.log($(document).scrollTop());
 				</div>
 				</div>
 				
-				<div style="position: absolute; text-shadow: 3px 3px 5px black; height: 27%; left: 38%; display: table; padding-top: 19%">
+				<div style="position: absolute; text-shadow: 3px 3px 5px black; height: 27%; left: 34%; display: table; padding-top: 19.25%">
 				<div style="display: table-cell; vertical-align: middle;" id='target-location'>
 				As a father, an enginner, and a<br/>problem solver, <b>#philWill</b> bring<br/>his work ethic to Congress.
 				</div>
 				</div>
 				
-				<div class="learnMore" style="position: relative;  left: calc(38% + ((35% - 160px) / 2));  margin-top: 35%">Learn More</div>
+				<div class="learnMore" style="position: relative;  left: calc(50% - (187px / 2));  margin-top: 35%">Learn More</div>
 				
 		</div>
 		
@@ -853,7 +853,7 @@ console.log($(document).scrollTop());
 		$("#target-location2").css("font-size", size).html(resizer.html());
 		
 		var rect = document.getElementById("target-location").getBoundingClientRect();
-		$("#target-parent").css("left", rect.left + (((rect.right - rect.left) - resizer.width()) / 2));
+		$("#target-parent").css("left", "calc(50% - (" + resizer.width() + "px / 2))");
 		
 	}
 </script>
