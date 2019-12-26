@@ -75,6 +75,22 @@
    color:white !important;
   text-decoration: none;	
 }
+
+	.joinButtonNew {
+	font-size: 24px; 
+	display:inline-block;
+	cursor: pointer;
+   color:  white !important;
+  text-decoration: none;	
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-color: rgb(4,68,118);
+		 transition: 0.2s ease-in;
+}
+
+
 	.headerLinkN {
 	font-size: 24px; 
 	display:inline-block;
@@ -85,7 +101,7 @@
 		padding-right: 20px;
 		padding-top: 5px;
 		padding-bottom: 5px;
-		background-color: rgba(255, 0, 0, 0.85);
+		background-color: rgb(210, 0, 0);
 		 transition: 0.2s ease-in;
 }
 
@@ -99,7 +115,7 @@ font-size: 22px;
 		padding-right: 38px;
 		padding-top: 12px;
 		padding-bottom: 12px;
-		background-color: rgb(42,79,118);
+		background-color: rgb(4,68,118);
 		 transition: 0.2s ease-in;
 }
 
@@ -113,20 +129,20 @@ font-size: 22px;
 		padding-right: 25px;
 		padding-top: 5px;
 		padding-bottom: 5px;
-		background-color: rgb(255, 0, 0, 0.85);
+		background-color: rgb(210, 0, 0);
 		 transition: 0.2s ease-in;
 }
 
 div.learnMore:hover {
-		background-color: rgba(46,87,130);
+		background-color: rgb(4,75,130);
 	}
 	
 	div.headerLinkN:hover {
-		background-color: rgba(255, 0, 0, 1);
+		background-color: rgb(255, 0, 0);
 	}
 	
 	div.donateMiniButton:hover {
-		background-color: rgba(255, 0, 0, 1);
+		background-color: rgb(255, 0, 0);
 	}
 	
 div.tile3 {
@@ -260,7 +276,7 @@ img.logOverlay {
 @media (min-aspect-ratio: 12/8) {
 	.ribbonContainer {
 		position: absolute;
-		top:  calc(4% + 25px) !important;
+		top:  calc(70% + 25px) !important;
 	}
 	
 .joinbutton {
@@ -511,13 +527,13 @@ p {
 
 
 
-<a target="_blank" class="headerLink"  style='font-size: 24px; display:inline-block;'>Meet<div class="textSpacer" style="width: 8px; display:inline-block;"></div>Phil</a>
+<a target="_blank" class="headerLink"  style='font-size: 24px; display:inline-block;'>Meet<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Phil</a>
 
-<a target="_blank" class="headerLink"  style='font-size: 24px;  display:inline-block;'>The<div class="textSpacer" style="width: 8px; display:inline-block;"></div>Vision</a>
+<a target="_blank" class="headerLink"  style='font-size: 24px;  display:inline-block;'>The<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Vision</a>
 
-<a target="_blank" class="headerLink"  style='font-size: 24px;  display:inline-block;'>Take<div class="textSpacer" style="width: 8px; display:inline-block;"></div>Action</a>
+<a target="_blank" class="headerLink"  style='font-size: 24px;  display:inline-block;'>Take<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Action</a>
 
-<a target="_blank" class="headerLink mover"  style='font-size: 24px;  display:inline-block;'>En<div class="textSpacer" style="width: 8px; display:inline-block;"></div>Espanol <img src="Tilde-white.svg" class="tilde" style="position: relative; right: 26px; bottom: 9px;" width="10"></img></a>
+<a target="_blank" class="headerLink mover"  style='font-size: 24px;  display:inline-block;'>En<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Espanol <img src="Tilde-white.svg" class="tilde" style="position: relative; right: 26px; bottom: 9px;" width="10"></img></a>
 
 <div target="_blank" class="headerLinkN" onclick="window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" style='margin-left: 15px;'>Contribute</div>
 	</div>
@@ -547,9 +563,15 @@ p {
 
 							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
 
-							<button class="joinbutton" id="join" onclick="toggleJoin()">Join</button>
 
-                            <button onclick="window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" class="donatebutton" id="contribute">Contribute</button>
+							<div style="background-color: rgba(255,255,255,0.25); position: relative; top: 80%; left: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
+
+								<div style=" display:inline-block;"></div>
+									<input type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.4 * (100% - 188px));display:inline-block;" placeholder="Name"></input>
+									<input type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.6 * (100% - 188px));display:inline-block;" placeholder="Email Address"></input>
+									
+									<div class="joinButtonNew" style="margin-left: 20px; display: inline-block; font-family: headerFont; position: relative; top: 1px;"><div>Take<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Action</div></div>
+							</div>
 			</div>
     </div>
     <div class="carousel-item">
@@ -654,7 +676,7 @@ reSize();
 </script>
 <div style="width: 100%; text-align: center; font-size: 30px; color: rgb(42,79,118); position: static; margin-top: 20px;  font-family: Verdana, Geneva, sans-serif;margin-bottom: 15px">Our Values</div>
 
-<div style="color: rgb(42,79,118); padding-top: 10px; margin-bottom: 80px;">
+<div style="color: rgb(42,79,118); padding-top: 20px; margin-bottom: 80px;">
 <div style="margin-left: calc((100% - 1250px) / 2); padding-bottom: 420px;">
 	<div style="float: left">
 		<img class="fadable" src="money.svg" height="150" style="position: relative;  left: calc((100% - 130px) / 2)"></img><br/>
@@ -693,8 +715,8 @@ to find solutions instead of fighting politicts.
 </div>
 
 <script>
-   var fadeStart=10 // 100px scroll or less will equiv to 1 opacity
-    ,fadeUntil=500 // 200px scroll or more will equiv to 0 opacity
+   var fadeStart=100 // 100px scroll or less will equiv to 1 opacity
+    ,fadeUntil=700 // 200px scroll or more will equiv to 0 opacity
     ,fading = $('.fadable')
 ;
 $(window).bind('scroll', function(){
@@ -802,15 +824,15 @@ console.log($(document).scrollTop());
 	
 		<div style="height: 100%; width: 100%">
 				
-				<div style="position: absolute; text-shadow: 3px 3px 5px black; display: table; padding-top: 12%" id="target-parent">
+				<div style="position: absolute; text-shadow: 3px 3px 4px black; display: table; padding-top: 12%" id="target-parent">
 				<div style="display: table-cell; vertical-align: middle;" id='target-location2'>
 				Meet Phil
 				</div>
 				</div>
 				
-				<div style="position: absolute; text-shadow: 3px 3px 5px black; height: 27%; left: 34%; display: table; padding-top: 19.25%">
-				<div style="display: table-cell; vertical-align: middle;" id='target-location'>
-				As a father, an enginner, and a<br/>problem solver, <b>#philWill</b> bring<br/>his work ethic to Congress.
+				<div style="position: absolute; text-shadow: 3px 3px 4px black; height: 27%; left: 33%; display: table; padding-top: 20.75%">
+				<div style="display: table-cell; vertical-align: middle; line-height: 1.35" id='target-location'>
+				As a father, an engineer, and a problem<br/>solver, <b>#philwill</b> bring with him to Congress<br/>a work ethic you can count on.
 				</div>
 				</div>
 				
@@ -822,7 +844,7 @@ console.log($(document).scrollTop());
 	function reSize()
 	{
 		var size = 100;
-		var desired_width = window.innerWidth * 0.35;
+		var desired_width = window.innerWidth * 0.38;
 		var resizer = $("#hidden-resizer");
 		resizer.css("font-size",100);
 		resizer.html(document.getElementById("target-location").innerHTML);

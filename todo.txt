@@ -1,8 +1,0 @@
-TODO:
-
-= Sign Up google calendar ADD ON
-= FIx underline header
-= link events to google API
-= join butoon
-= resizing for the accordions and the 3 icons
-25919
