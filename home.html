@@ -89,7 +89,9 @@
 		background-color: rgb(4,68,118);
 		 transition: 0.2s ease-in;
 }
-
+.joinButtonNew:hover {
+	background-color: rgb(5,82,142);
+}
 
 	.headerLinkN {
 	font-size: 24px; 
@@ -511,7 +513,7 @@ p {
 </head>
 
 
-<body onclick="clearInterval(carouselEngine)" onscroll="clearInterval(carouselEngine)" style="overflow: auto" onresize="reSize()">
+<body onclick="clearInterval(carouselEngine)" onscroll="clearInterval(carouselEngine)" onkeydown="clearInterval(carouselEngine)" style="overflow: auto" onresize="reSize()">
 
 	<div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
@@ -570,8 +572,8 @@ p {
 							<div style="background-color: rgba(255,255,255,0.25); position: relative; top: 80%; left: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
 
 								<div style=" display:inline-block;"></div>
-									<input type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.4 * (100% - 188px));display:inline-block;" placeholder="Name"></input>
-									<input type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.6 * (100% - 188px));display:inline-block;" placeholder="Email Address"></input>
+									<input onkeyup="doType()" type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.4 * (100% - 188px));display:inline-block;" placeholder="Name" id="name1"></input>
+									<input onkeyup="doType()"  type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.6 * (100% - 188px));display:inline-block;" placeholder="Email Address" id="email1"></input>
 									
 									<div class="joinButtonNew" style="margin-left: 20px; display: inline-block; font-family: headerFont; position: relative; top: 1px;"><div>Take<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Action</div></div>
 							</div>
@@ -598,8 +600,8 @@ p {
 							<div style="background-color: rgba(255,255,255,0.25); position: relative; top: 80%; left: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
 
 								<div style=" display:inline-block;"></div>
-									<input type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.4 * (100% - 188px));display:inline-block;" placeholder="Name"></input>
-									<input type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.6 * (100% - 188px));display:inline-block;" placeholder="Email Address"></input>
+									<input onkeyup="doType()"  type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.4 * (100% - 188px));display:inline-block;" placeholder="Name" id="name2"></input>
+									<input onkeyup="doType()"  type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.6 * (100% - 188px));display:inline-block;" placeholder="Email Address" id="email2"></input>
 									
 									<div class="joinButtonNew" style="margin-left: 20px; display: inline-block; font-family: headerFont; position: relative; top: 1px;"><div>Take<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Action</div></div>
 							</div>
@@ -627,8 +629,8 @@ p {
 							<div style="background-color: rgba(255,255,255,0.25); position: relative; top: 80%; left: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
 
 								<div style=" display:inline-block;"></div>
-									<input type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.4 * (100% - 188px));display:inline-block;" placeholder="Name"></input>
-									<input type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.6 * (100% - 188px));display:inline-block;" placeholder="Email Address"></input>
+									<input onkeyup="doType()" type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.4 * (100% - 188px));display:inline-block;" placeholder="Name" id="name3"></input>
+									<input onkeyup="doType()" type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.6 * (100% - 188px));display:inline-block;" placeholder="Email Address" id="email3"></input>
 									
 									<div class="joinButtonNew" style="margin-left: 20px; display: inline-block; font-family: headerFont; position: relative; top: 1px;"><div>Take<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Action</div></div>
 							</div>
@@ -695,6 +697,20 @@ reSize();
 	
 });
 	
+	
+	function doType()
+	{
+		
+		var currentSlide = $('div.active').index() + 1;
+		var currentName = document.getElementById("name"+currentSlide).value;
+		var currentEmail = document.getElementById("email"+currentSlide).value;
+		for (var i=1; i <= 3; i++)
+		{
+			document.getElementById("name"+i).value = currentName;
+			document.getElementById("email"+i).value = currentEmail;
+		}
+	
+	}
 	
 </script>
 <div style="width: 100%; text-align: center; font-size: 30px; color: rgb(42,79,118); position: static; margin-top: 20px;  font-family: Verdana, Geneva, sans-serif;margin-bottom: 15px">Our Values</div>
@@ -766,21 +782,28 @@ console.log($(document).scrollTop());
 				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Education</div></div>
 				<div class="panel">
 				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				<br/><br/><div style="border: 2px solid rgb(42,79,118); padding: 10px; display:inline-block; margin-bottom:10px; cursor: pointer">Find Out How</div><br/>	
 				</div>
 
 					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Healthcare</div></div>
 				<div class="panel">
 				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				<br/><br/><div style="border: 2px solid rgb(42,79,118); padding: 10px; display:inline-block; margin-bottom:10px; cursor: pointer">Find Out How</div><br/>	
+				
 				</div>
 
 					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Union Protections</div></div>
 				<div class="panel">
 				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				<br/><br/><div style="border: 2px solid rgb(42,79,118); padding: 10px; display:inline-block; margin-bottom:10px; cursor: pointer">Find Out How</div><br/>	
+				
 				</div>
 				
 				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Union Protections</div></div>
 				<div class="panel">
 				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				<br/><br/><div style="border: 2px solid rgb(42,79,118); padding: 10px; display:inline-block; margin-bottom:10px; cursor: pointer">Find Out How</div><br/>	
+				
 				</div>
 		</div>
 		</td>
@@ -789,21 +812,29 @@ console.log($(document).scrollTop());
 				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Environment</div></div>
 				<div class="panel">
 				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				<br/><br/><div style="border: 2px solid rgb(42,79,118); padding: 10px; display:inline-block; margin-bottom:10px; cursor: pointer">Find Out How</div><br/>	
+				
 				</div>
 
 					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Campaign Finance Reform</div></div>
 				<div class="panel">
 				 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				<br/><br/><div style="border: 2px solid rgb(42,79,118); padding: 10px; display:inline-block; margin-bottom:10px; cursor: pointer">Find Out How</div><br/>	
+				
 				</div>
 
 					<div class="accordion"><div style="margin-left: 5px; display: inline-block">Economy</div></div>
 				<div class="panel">
 				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				<br/><br/><div style="border: 2px solid rgb(42,79,118); padding: 10px; display:inline-block; margin-bottom:10px; cursor: pointer">Find Out How</div><br/>	
+				
 				</div>
 				
 				<div class="accordion"><div style="margin-left: 5px; display: inline-block">Union Protections</div></div>
 				<div class="panel">
 				  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+				<br/><br/><div style="border: 2px solid rgb(42,79,118); padding: 10px; display:inline-block; margin-bottom:10px; cursor: pointer">Find Out How</div><br/>	
+				
 				</div>
 		</div>
 		</td>
@@ -840,7 +871,8 @@ console.log($(document).scrollTop());
 		  });
 		}
 		</script>
-		<br/>See All Issues
+		<br/>
+		<div style="text-align: center; width: 100%"><a style="font-size: 22px; color: rgb(42,79,118)" href="issues.html">See All Issues</a></div>
 
 		</div>
 	<div class="meetPhil" style="color: white; height: 0px; padding-bottom: 51.029%">
