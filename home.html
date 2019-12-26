@@ -147,7 +147,7 @@ div.learnMore:hover {
 	
 div.tile3 {
   z-index: -10;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) , rgba(255, 255, 255, 0) 30%),url("phil-mobile.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) , rgba(255, 255, 255, 0) 30%),url("Phil03.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 20% 50%;
@@ -207,7 +207,7 @@ img.logOverlay {
 	
     display: block;
     position: absolute; 
-	left: calc((25% - 100px) - ((400px - 250px) / 2)); 
+	left: calc((25% - 120px) - ((400px - 250px) / 2)); 
 	bottom: calc((100% - 240px) / 2); 
 	width:400px;
   }
@@ -217,7 +217,7 @@ img.logOverlay {
 @media only screen and (max-width: 1300px) 
 	{
 		img.logOverlay {
-				left: calc((25% - 100px) - ((30% - 250px) / 2)); 
+				left: calc((25% - 120px) - ((30% - 250px) / 2)); 
 				width:30%;
 				top: calc((20% - 15px) + (((100vh - 140px) - (30vw * 0.74213679245)) - (40vh - 45px)) / 2);
 			}
@@ -276,7 +276,7 @@ img.logOverlay {
 @media (min-aspect-ratio: 12/8) {
 	.ribbonContainer {
 		position: absolute;
-		top:  calc(70% + 25px) !important;
+		top:  calc(80% - 70px) !important;
 	}
 	
 .joinbutton {
@@ -521,8 +521,10 @@ p {
 <div id="header" style="height: 70px; position: absolute; top: 0px; left: 0px; width: 100%; font-family: headerFont;  z-index:9999">
 
 
-<img src="logo-simple-white.svg" class="headerLogo" alt="logo" style="position: absolute; left: 20px; top: 12px;" height="75" ></img>
-
+<img src="logo-simple-white.svg" class="headerLogo" alt="logo" style="position: absolute; left: 20px; top: 12px;" height="75" ></img> 
+<div style="color: white; font-size: 33px; text-align: center; line-height: 1.2; position: absolute; left: 235px; top: 15px; ">Alachua <div style="height: 7px; width: 7px; background-color: white; border-radius: 50%; display: inline-block; position: relative; bottom: 5px; margin-left:5px;margin-right:5px;"></div> Bradford <div style="height: 7px; width: 7px; background-color: white; border-radius: 50%; display: inline-block; position: relative; bottom: 5px;margin-left:5px;margin-right:5px;"></div> Clay<br/>Marion <div style="height: 7px; width: 7px; background-color: white; border-radius: 50%; display: inline-block; position: relative; bottom: 5px; margin-left:5px;margin-right:5px;"></div> Putnam <div style="height: 7px; width: 7px; background-color: white; border-radius: 50%; display: inline-block; position: relative; bottom: 5px; margin-left:5px;margin-right:5px;"></div> Union</div>
+							
+							
 <div class="headerText" style="position: absolute;  right: 20px; display:inline-block;top: 20px;" >
 
 
@@ -550,7 +552,7 @@ p {
   <div class="carousel-inner" >
     <div class="carousel-item active">
       <div class="tile1 philTile">
-				<div id="ribbonContainer1" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText1" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> protect our environment</div>
+				<div id="ribbonContainer1" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText1" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> invest in rurual education</div>
 						   <div id="ribbon1" class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
 							  <i></i>
@@ -562,7 +564,8 @@ p {
 
 
 							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
-
+							
+							
 
 							<div style="background-color: rgba(255,255,255,0.25); position: relative; top: 80%; left: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
 
@@ -576,7 +579,8 @@ p {
     </div>
     <div class="carousel-item">
        <div class="tile2 philTile" >
-				<div id="ribbonContainer2" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText2" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> fight for rural America</div>
+				
+				<div id="ribbonContainer2" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText2" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> protect our environment</div>
 						   <div id="ribbon2" class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
 							  <i></i>
@@ -586,16 +590,26 @@ p {
 							<div class = "ribbonBody" style="position: absolute; top: -103px; "></div>
 						</div>
 
+
 							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
+							
+							
 
-							<button class="joinbutton" id="join">Join</button>
+							<div style="background-color: rgba(255,255,255,0.25); position: relative; top: 80%; left: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
 
-							<button onclick=" window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" class="donatebutton" id="contribute">Contribute</button>
-			</div>
+								<div style=" display:inline-block;"></div>
+									<input type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.4 * (100% - 188px));display:inline-block;" placeholder="Name"></input>
+									<input type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.6 * (100% - 188px));display:inline-block;" placeholder="Email Address"></input>
+									
+									<div class="joinButtonNew" style="margin-left: 20px; display: inline-block; font-family: headerFont; position: relative; top: 1px;"><div>Take<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Action</div></div>
+							</div>
+				
+				</div>
     </div>
     <div class="carousel-item">
-      <div class="tile3" style="height: calc(100vh - 70px); width:100%">
-			<div id="ribbonContainer3" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText3" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> invest in public education</div>
+      <div class="tile3 philTile">
+			
+			<div id="ribbonContainer3" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText3" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> protect our environment</div>
 						   <div id="ribbon3" class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
 							  <i></i>
@@ -605,18 +619,27 @@ p {
 							<div class = "ribbonBody" style="position: absolute; top: -103px; "></div>
 						</div>
 
+
 							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
+							
+							
 
-							<button class="joinbutton" id="join" onclick="toggleJoin()">Join</button>
+							<div style="background-color: rgba(255,255,255,0.25); position: relative; top: 80%; left: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
 
-							<button onclick="window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" class="donatebutton" id="contribute">Contribute</button>
+								<div style=" display:inline-block;"></div>
+									<input type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.4 * (100% - 188px));display:inline-block;" placeholder="Name"></input>
+									<input type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.6 * (100% - 188px));display:inline-block;" placeholder="Email Address"></input>
+									
+									<div class="joinButtonNew" style="margin-left: 20px; display: inline-block; font-family: headerFont; position: relative; top: 1px;"><div>Take<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Action</div></div>
+							</div>
+							
 			</div>
     </div>
   </div>
-  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+  <a class="carousel-control-prev" onclick="$('#carouselExampleIndicators').carousel('prev')" role="button" style="cursor: pointer" >
     
   </a>
-  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next" style="">
+  <a class="carousel-control-next" onclick="$('#carouselExampleIndicators').carousel('next')" role="button" style="cursor: pointer">
    
   </a>
 </div>
@@ -625,7 +648,7 @@ p {
 	
 	//Main Timer function
 	
-	// var carouselEngine = setInterval(mainTimer, 6000);
+	var carouselEngine = setInterval(mainTimer, 6000);
 	// Restart Engine
 	function mainTimer() {
   		$("#carouselExampleIndicators").carousel('next');
