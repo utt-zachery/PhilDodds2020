@@ -149,14 +149,14 @@ div.learnMore:hover {
 	
 div.tile3 {
   z-index: -10;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) , rgba(255, 255, 255, 0) 30%),url("Phil03.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) , rgba(255, 255, 255, 0) 30%),url("Phil03-flipped.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 20% 50%;
 }
 div.tile2 {
   z-index: -10;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) , rgba(255, 255, 255, 0) 40%),url("Phil02.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) , rgba(255, 255, 255, 0) 40%),url("Phil02-flipped.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: 40% 70%;
@@ -164,7 +164,7 @@ div.tile2 {
 
 div.tile1 {
   z-index: -10;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) , rgba(255, 255, 255, 0) 30%),url("phil-mobile.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) , rgba(255, 255, 255, 0) 30%),url("Phil1-flipped.png");
     
     background-position: 40% 35%;
 }
@@ -209,7 +209,7 @@ img.logOverlay {
 	
     display: block;
     position: absolute; 
-	left: calc((25% - 120px) - ((400px - 250px) / 2)); 
+	right: calc((25% - 120px) - ((400px - 250px) / 2)); 
 	bottom: calc((100% - 240px) / 2); 
 	width:400px;
   }
@@ -554,7 +554,7 @@ p {
   <div class="carousel-inner" >
     <div class="carousel-item active">
       <div class="tile1 philTile">
-				<div id="ribbonContainer1" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText1" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> invest in rurual education</div>
+				<div id="ribbonContainer1" class="ribbonContainer" style="position: absolute;  right: calc(25% - 200px); text-align: center"><div id="ribbonText1" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> invest in rurual education</div>
 						   <div id="ribbon1" class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
 							  <i></i>
@@ -569,11 +569,11 @@ p {
 							
 							
 
-							<div style="background-color: rgba(255,255,255,0.25); position: relative; top: 80%; left: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
+							<div style="background-color: rgba(255,255,255,0.25); position: absolute; top: 80%; right: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
 
 								<div style=" display:inline-block;"></div>
-									<input onkeyup="doType()" type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.5 * (100% - 188px));display:inline-block;" placeholder="Name" id="name1"></input>
-									<input onkeyup="doType()"  type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.5 * (100% - 188px));display:inline-block;" placeholder="Email Address" id="email1"></input>
+									<input onkeyup="doType()" type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.4 * (100% - 188px));display:inline-block;" placeholder="Name" id="name1"></input>
+									<input onkeyup="doType()"  type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.6 * (100% - 188px));display:inline-block;" placeholder="Email Address" id="email1"></input>
 									
 									<div class="joinButtonNew" style="margin-left: 20px; display: inline-block; font-family: headerFont; position: relative; top: 1px;"><div>Take<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Action</div></div>
 							</div>
@@ -582,7 +582,7 @@ p {
     <div class="carousel-item">
        <div class="tile2 philTile" >
 				
-				<div id="ribbonContainer2" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText2" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> protect our environment</div>
+				<div id="ribbonContainer2" class="ribbonContainer" style="position: absolute;  right: calc(25% - 200px); text-align: center"><div id="ribbonText2" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> protect our environment</div>
 						   <div id="ribbon2" class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
 							  <i></i>
@@ -597,7 +597,7 @@ p {
 							
 							
 
-							<div style="background-color: rgba(255,255,255,0.25); position: relative; top: 80%; left: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
+							<div style="background-color: rgba(255,255,255,0.25); position: absolute; top: 80%; right: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
 
 								<div style=" display:inline-block;"></div>
 									<input onkeyup="doType()"  type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.5 * (100% - 188px));display:inline-block;" placeholder="Name" id="name2"></input>
@@ -611,7 +611,7 @@ p {
     <div class="carousel-item">
       <div class="tile3 philTile">
 			
-			<div id="ribbonContainer3" class="ribbonContainer" style="position: absolute;  left: calc(25% - 200px); text-align: center"><div id="ribbonText3" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> protect our environment</div>
+			<div id="ribbonContainer3" class="ribbonContainer" style="position: absolute;  right: calc(25% - 200px); text-align: center"><div id="ribbonText3" class="ribbonText" style="display: none; position:relative; top:4px; z-index: 90; width: 400px"><strong>#philwill</strong> protect our environment</div>
 						   <div id="ribbon3" class="ribbon" style="position: absolute; top: -103px" >
 							  <i></i>
 							  <i></i>
@@ -626,11 +626,11 @@ p {
 							
 							
 
-							<div style="background-color: rgba(255,255,255,0.25); position: relative; top: 80%; left: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
+							<div style="background-color: rgba(255,255,255,0.25); position: absolute; top: 80%; right: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
 
 								<div style=" display:inline-block;"></div>
-									<input onkeyup="doType()" type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.5 * (100% - 188px));display:inline-block;" placeholder="Name" id="name3"></input>
-									<input onkeyup="doType()" type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.5 * (100% - 188px));display:inline-block;" placeholder="Email Address" id="email3"></input>
+									<input onkeyup="doType()" type="text" style="height: 45px; padding: 10px; display: inline-block;width: calc(0.4 * (100% - 188px));display:inline-block;" placeholder="Name" id="name3"></input>
+									<input onkeyup="doType()" type="text" style="margin-left: 20px; height: 45px; padding: 10px; display: inline-block; width: calc(0.6 * (100% - 188px));display:inline-block;" placeholder="Email Address" id="email3"></input>
 									
 									<div class="joinButtonNew" style="margin-left: 20px; display: inline-block; font-family: headerFont; position: relative; top: 1px;"><div>Take<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Action</div></div>
 							</div>

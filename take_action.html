@@ -1,0 +1,386 @@
+<head>
+
+<style>
+	
+	.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.site-content {
+  flex: 1;
+}
+	.philTile
+	{
+		background-size: cover;
+		background-repeat: no-repeat;
+		height: 40vh; 
+		width:100%
+	}
+	
+	.headerLink {
+	margin-left: 30px;
+   color:white !important;
+  text-decoration: none;	
+}
+
+	.joinButtonNew {
+	font-size: 24px; 
+	display:inline-block;
+	cursor: pointer;
+   color:  white !important;
+  text-decoration: none;	
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-color: rgb(4,68,118);
+		 transition: 0.2s ease-in;
+}
+.joinButtonNew:hover {
+	background-color: rgb(5,82,142);
+}
+
+	.headerLinkN {
+	font-size: 24px; 
+	display:inline-block;
+	cursor: pointer;
+   color:  white !important;
+  text-decoration: none;	
+		padding-left: 20px;
+		padding-right: 20px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-color: rgb(210, 0, 0);
+		 transition: 0.2s ease-in;
+}
+
+.learnMore {
+font-size: 22px; 
+	display:inline-block;
+	cursor: pointer;
+   color:  white !important;
+  text-decoration: none;	
+		padding-left: 38px;
+		padding-right: 38px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		background-color: rgb(4,68,118);
+		 transition: 0.2s ease-in;
+}
+
+.donateMiniButton {
+	font-size: 14px; 
+	display:inline-block;
+	cursor: pointer;
+   color:  white !important;
+  text-decoration: none;	
+		padding-left: 25px;
+		padding-right: 25px;
+		padding-top: 5px;
+		padding-bottom: 5px;
+		background-color: rgb(210, 0, 0);
+		 transition: 0.2s ease-in;
+}
+
+div.learnMore:hover {
+		background-color: rgb(5,82,142);
+	}
+	
+	div.headerLinkN:hover {
+		background-color: rgb(255, 0, 0);
+	}
+	
+	div.donateMiniButton:hover {
+		background-color: rgb(255, 0, 0);
+	}
+	
+
+div.tile1 {
+  z-index: -10;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.95) , rgba(255, 255, 255, 0) 70%),url("action.jpg");
+    background-position: 40% 75%;
+	background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.donatebutton {
+  outline: 0 !important;
+  display: block;
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  left: calc(25% - 100px);
+  bottom: calc(20% - 60px);
+  background-color: #197b30;
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  font-size: 23px;
+  cursor: pointer;
+  height: 50px;
+  width: 250px;
+  border-radius: 50px;
+}
+
+.joinbutton {
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  left: calc(25% - 100px);
+  bottom: 20%;
+  background-color: rgb(42,79,118);
+  border: 2px solid white;
+  color: white;
+  text-align: center;
+  font-size: 23px;
+  cursor: pointer;
+  height: 50px;
+  width: 250px;
+  outline: 0 !important;
+  border-radius: 50px;
+}
+
+img.logOverlay {
+	
+    display: block;
+    position: absolute; 
+	left: calc((25% - 120px) - ((400px - 250px) / 2)); 
+	bottom: calc((100% - 240px) / 2); 
+	width:400px;
+  }
+  
+
+	
+@media only screen and (max-width: 1300px) 
+	{
+		img.logOverlay {
+				left: calc((25% - 120px) - ((30% - 250px) / 2)); 
+				width:30%;
+				top: calc((20% - 15px) + (((100vh - 140px) - (30vw * 0.74213679245)) - (40vh - 45px)) / 2);
+			}
+			 div.tile1 {
+			 background-position: 40% 40%;
+			 
+			
+		  }
+		  
+		  div.tile2 {
+			 background-position: 40% 80%;
+		  }
+	}
+  
+  
+  @media only screen and (max-width: 1010px) {
+		 div.tile3,div.tile1 {
+			 background-position: 50% 40%;
+		  }
+	  .ribbonContainer{
+		  display: none !important;
+	  }
+		  img.logOverlay {
+			top: calc(51.4285714287% / 2);
+			left: calc((25% - 150px) - ((30% - 250px) / 2)); 
+			}
+		  .joinbutton, .donatebutton{
+		   left:calc(25% - 150px);
+		  }
+  
+  }
+  
+   @media only screen and (max-width: 765px) 
+   {
+ 		
+		a.headerLink {
+			margin-left: 15px;
+		}
+		a.headerLinkN {
+		margin-left: 0px;
+		}
+   }
+	
+	
+   @media only screen and (max-width: 600px) 
+   {
+ 
+		  .joinbutton,img.logOverlay, .donatebutton{
+			display:none;
+		  }
+			  div.tile1,div.tile2 {
+				background-position: 80% 40%;
+				}
+		  }
+
+@media (min-aspect-ratio: 12/8) {
+	.ribbonContainer {
+		position: absolute;
+		top:  calc(80% - 60px) !important;
+	}
+	
+.joinbutton {
+	  bottom: calc(4% + 65px);
+	}
+	
+.donatebutton {
+	 bottom: calc(4% + 5px);
+	}
+	
+	
+}
+	
+	 @media only screen and (max-height: 680px) 
+   {
+ 		 div.tile3,div.tile2, div.tile1 {
+			 height: 680px !important;
+		  }
+	   
+	   .logOverlay {
+		   top: calc(95px + ((451px - (30vw * 0.74213679245)) / 2)) !important;
+	   }
+	   
+	}
+	
+	 @media only screen and (max-height: 680px) and (min-width: 1300px)
+   {
+	   .logOverlay {
+		   top: calc(95px + ((451px - (400px * 0.74213679245)) / 2)) !important;
+	   }
+	}
+
+	@media only screen and (max-width: 690px) 
+   {
+	   .textSpacer {
+		   width: 4px !important;
+	   }
+	   .tilde {
+		   width: 11px !important;
+		   top: -9px;
+		   left: -25px;
+	   }
+	   .headerText {
+		   width: 220px;
+		   top: 2px !important;
+	   }
+		a.headerLink {
+			font-size: 23px !important;
+			margin-left: 15px;
+			height: 30px;
+		}
+		a.headerLinkN {
+			margin-left: 15px;
+			font-size: 23px !important;
+			height: 30px
+		}
+	   .mover {
+		   margin-left: 20px !important;
+	   }
+	   .underLine {
+		   top: -7px !important;
+		   left: -3px !important;
+	   }
+	   
+	   .tile3 {
+	   background-position: 75% 50% !important;
+	   }
+   }
+   
+   
+	@font-face {
+  font-family: headerFont;
+  src: url(bold.otf);
+  font-weight: bold;
+}
+
+</style>
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</head>
+
+<div class="site-container">
+<body style="overflow: auto" >
+
+	
+<!–– START Site Header ––>
+<main class="site-content">
+<div id="header" style="height: 70px; position: absolute; top: 0px; left: 0px; width: 100%; font-family: headerFont;  z-index:9999">
+
+
+<img src="logo-simple-white.svg" class="headerLogo" alt="logo" style="position: absolute; left: 20px; top: 12px;" height="75" ></img> 
+<div style="color: white; font-size: 33px; text-align: center; line-height: 1.2; position: absolute; left: 235px; top: 15px; ">Alachua <div style="height: 7px; width: 7px; background-color: white; border-radius: 50%; display: inline-block; position: relative; bottom: 5px; margin-left:5px;margin-right:5px;"></div> Bradford <div style="height: 7px; width: 7px; background-color: white; border-radius: 50%; display: inline-block; position: relative; bottom: 5px;margin-left:5px;margin-right:5px;"></div> Clay<br/>Marion <div style="height: 7px; width: 7px; background-color: white; border-radius: 50%; display: inline-block; position: relative; bottom: 5px; margin-left:5px;margin-right:5px;"></div> Putnam <div style="height: 7px; width: 7px; background-color: white; border-radius: 50%; display: inline-block; position: relative; bottom: 5px; margin-left:5px;margin-right:5px;"></div> Union</div>
+							
+							
+<div class="headerText" style="position: absolute;  right: 20px; display:inline-block;top: 20px;" >
+
+
+
+<a target="_blank" class="headerLink"  style='font-size: 24px; display:inline-block;'>Meet<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Phil</a>
+
+<a target="_blank" class="headerLink"  style='font-size: 24px;  display:inline-block;'>The<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Vision</a>
+
+<a target="_blank" class="headerLink"  style='font-size: 24px;  display:inline-block;'>Take<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Action</a>
+
+<a target="_blank" class="headerLink mover"  style='font-size: 24px;  display:inline-block;'>En<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Espanol <img src="Tilde-white.svg" class="tilde" style="position: relative; right: 26px; bottom: 9px;" width="10"></img></a>
+
+<div target="_blank" class="headerLinkN" onclick="window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" style='margin-left: 15px;'>Contribute</div>
+	</div>
+</div>
+<!–– END Site Header ––>
+
+<div class="tile1 philTile">
+
+</div>
+
+
+</main>
+<footer >
+<div style="width: 100%; text-align: center; font-size: 30px; color: rgb(42,79,118); position: static;  font-family: Verdana, Geneva, sans-serif;margin-bottom: 20px">Contribute</div>
+
+
+
+<div style="text-align: center;margin-left: 10px;">
+	<div class="donateMiniButton" style=" display: inline-block;">$2</div>
+	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;">$5</div>
+		<div class="donateMiniButton" style=" display: inline-block;margin-left: 10px;">$10</div>
+	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;">$15</div>
+	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;">$25</div>
+	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;">$50</div>
+</div>
+
+<br/>
+	<div style="background-color: rgb(42,79,118); color:white; height: 250px;">
+		<div style="position: absolute; left:0; width: 100%;  text-align: center;margin-top: 150px;">
+		
+				<div style="text-align: center; color: white; display: inline-block ">
+				9200 NW 39th Ave Suite 130-209 Gainesville, Fl 32606
+				<div style="margin-top: 7px; position: relative; color: white;  border: 3px solid white; padding: 7px; font-size: 20px; font-family: headerFont; ">Paid<div  style="width: 4px; display:inline-block;"></div>for<div  style="width: 4px; display:inline-block;"></div>by<div  style="width: 4px; display:inline-block;"></div>Voters<div  style="width: 4px; display:inline-block;"></div>for<div  style="width: 4px; display:inline-block;"></div>Phil<div  style="width: 4px; display:inline-block;"></div>Dodds</div>
+				</div>
+		</div>
+		
+			<img src="logo-white.svg" height="200" style="position: relative; top: 25px; padding-left: 80px"></img>
+			
+			
+			
+			
+			<img src="grad1.png" height="250" style="position: absolute; right:0px;"></img>
+			<div style="width: 100%; text-align: center;  font-size: 32px; position: relative; bottom:185px;  font-family: headerFont">Stay<div class="textSpacer" style="width: 6px; display:inline-block;"></div>in<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Touch</div>
+	
+			<div style="position: relative; bottom: 165px; left: calc((100% - 224px) / 2); width: 224px">
+					<img onclick="window.open('https://www.facebook.com/VotersForPhilDodds/')" src="social-media-icons/facebook.svg" height="45" style="display: inline-block; cursor: pointer" ></img>
+					<img src="social-media-icons/instagram.svg" height="45" style="display: inline-block; margin-left: 10px" ></img>
+					<img onclick="window.open('https://twitter.com/PhilDoddsfl03')" src="social-media-icons/twitter.svg" height="45" style="display: inline-block; margin-left: 10px; cursor: pointer" ></img>
+					<img src="social-media-icons/youtube.svg" height="45" style="display: inline-block; margin-left: 10px" ></img>
+					
+			</div>
+			
+			
+			
+			
+	</div>
+</footer>
+
+
+</body>
+</div>
