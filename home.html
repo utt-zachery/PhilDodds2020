@@ -513,8 +513,8 @@ p {
 </head>
 
 
-<body onclick="clearInterval(carouselEngine)" onscroll="clearInterval(carouselEngine)" onkeydown="clearInterval(carouselEngine)" style="overflow: auto" onresize="reSize()">
-
+<body onclick="clearInterval(carouselEngine)" onscroll="clearInterval(carouselEngine)" onkeydown="clearInterval(carouselEngine)" style="overflow: auto;" onresize="reSize()">
+<div class="content">
 	<div id="fb-root"></div>
 <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v5.0"></script>
 	
@@ -984,11 +984,12 @@ console.log($(document).scrollTop());
 </script>
 <div id="hidden-resizer" style="visibility: hidden; display: none"></div>
 <br/><br/>
+</div>
+</body>
+
 
 <footer >
 <div style="width: 100%; text-align: center; font-size: 30px; color: rgb(42,79,118); position: static;  font-family: Verdana, Geneva, sans-serif;margin-bottom: 20px">Contribute</div>
-
-
 
 <div style="text-align: center;margin-left: 10px;">
 	<div class="donateMiniButton" style=" display: inline-block;" onclick="window.open('https://secure.actblue.com/donate/phildoddsfl03?amount=2','_blank')" >$2</div>
@@ -999,7 +1000,13 @@ console.log($(document).scrollTop());
 	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;" onclick="window.open('https://secure.actblue.com/donate/phildoddsfl03?amount=50','_blank')">$50</div>
 </div>
 
-<br/>
+<div style="position: relative; left: calc((100% - 224px) / 2); width: 224px; top: 129px;">
+	<img onclick="window.open('https://www.facebook.com/VotersForPhilDodds/')" src="social-media-icons/facebook.svg" height="45" style="display: inline-block; cursor: pointer" ></img>
+	<img src="social-media-icons/instagram.svg" height="45" style="display: inline-block; margin-left: 10px" ></img>
+	<img onclick="window.open('https://twitter.com/PhilDoddsfl03')" src="social-media-icons/twitter.svg" height="45" style="display: inline-block; margin-left: 10px; cursor: pointer" ></img>
+	<img src="social-media-icons/youtube.svg" height="45" style="display: inline-block; margin-left: 10px" ></img>
+</div>
+
 	<div style="background-color: rgb(42,79,118); color:white; height: 250px;">
 		<div style="position: absolute; left:0; width: 100%;  text-align: center;margin-top: 150px;">
 		
@@ -1010,26 +1017,15 @@ console.log($(document).scrollTop());
 		</div>
 		
 			<img src="logo-white.svg" height="200" style="position: relative; top: 25px; padding-left: 80px"></img>
-			
-			
-			
-			
+		
 			<img src="grad1.png" height="250" style="position: absolute; right:0px;"></img>
 			<div style="width: 100%; text-align: center;  font-size: 32px; position: relative; bottom:185px;  font-family: headerFont">Stay<div class="textSpacer" style="width: 6px; display:inline-block;"></div>in<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Touch</div>
 	
-			<div style="position: relative; bottom: 165px; left: calc((100% - 224px) / 2); width: 224px">
-					<img onclick="window.open('https://www.facebook.com/VotersForPhilDodds/')" src="social-media-icons/facebook.svg" height="45" style="display: inline-block; cursor: pointer" ></img>
-					<img src="social-media-icons/instagram.svg" height="45" style="display: inline-block; margin-left: 10px" ></img>
-					<img onclick="window.open('https://twitter.com/PhilDoddsfl03')" src="social-media-icons/twitter.svg" height="45" style="display: inline-block; margin-left: 10px; cursor: pointer" ></img>
-					<img src="social-media-icons/youtube.svg" height="45" style="display: inline-block; margin-left: 10px" ></img>
-					
-			</div>
-			
-			
-			
-			
 	</div>
 </footer>
+<!--
+
+
 
 <style>
 .phil_door {
@@ -1085,4 +1081,5 @@ document.body.style="overflow: auto";
 </div>
 
 </div>
-</body>
+-->
+</html>
