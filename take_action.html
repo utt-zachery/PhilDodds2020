@@ -1,6 +1,52 @@
 <head>
 
 <style>
+	.takeAction{
+		
+		box-shadow: inset 0 0 0 0 rgb(5,82,142);
+	-webkit-transition: all ease 0.6s;
+	-moz-transition: all ease 0.6s;
+	transition: all ease 0.6s;
+	}
+	.takeAction1:hover{
+		box-shadow: inset 400px 0 0 0 rgb(5,82,142);
+    	color: #fff !important;
+	}
+
+	.takeAction2:hover{
+		box-shadow: inset 0 -600px 0 0 rgb(5,82,142);
+    	color: #fff !important;
+	}
+
+	.takeAction3:hover{
+		box-shadow: inset -600px 0 0 0 rgb(5,82,142);
+    	color: #fff !important;
+	}
+	.divider1,.linkTile, .arrow1
+	{
+		-webkit-transition: all ease 0.6s;
+		-moz-transition: all ease 0.6s;
+		transition: all ease 0.6s;
+	}
+
+	.takeAction:hover  .linkTile1{
+		background-image: url(people-white.svg) !important;
+	}
+	.takeAction:hover  .linkTile2{
+		background-image: url(sign-white.svg) !important;
+	}
+
+	.takeAction:hover  .linkTile3{
+		background-image: url(vote-white.svg) !important;
+	}
+
+	.takeAction:hover  .divider1{
+		background-image: url(divider-white.svg) !important;
+	}
+	.takeAction:hover  .arrow1{
+		background-image: url(left-white-arrow.svg) !important;
+	}
+
 	
 	.site-container {
   display: flex;
@@ -38,9 +84,9 @@
 		background-color: rgb(4,68,118);
 		 transition: 0.2s ease-in;
 }
-.joinButtonNew:hover {
-	background-color: rgb(5,82,142);
-}
+	.joinButtonNew:hover {
+		background-color: rgb(5,82,142);
+	}
 
 	.headerLinkN {
 	font-size: 24px; 
@@ -324,7 +370,7 @@ img.logOverlay {
 
 <a target="_blank" class="headerLink mover"  style='font-size: 24px;  display:inline-block;'>En<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Espanol <img src="Tilde-white.svg" class="tilde" style="position: relative; right: 26px; bottom: 9px;" width="10"></img></a>
 
-<div target="_blank" class="headerLinkN" onclick="window.open('https://www.votersforphildodds.org/donate_via_actblue','_blank')" style='margin-left: 15px;'>Contribute</div>
+<div target="_blank" class="headerLinkN" onclick="window.open('https://secure.actblue.com/donate/phildoddsfl03','_blank')" style='margin-left: 15px;'>Contribute</div>
 	</div>
 </div>
 <!–– END Site Header ––>
@@ -334,25 +380,43 @@ img.logOverlay {
 </div>
 <br/>
 	<div style="text-align: center; width: 100%; font-size: 30px;  color: rgb(42,79,118);">Take Action</div>
-	<br/>
-		<div style="border: 4px solid  rgb(42,79,118); height: 500px; width: 400px; margin-left: 10%">
-		here we go!
+	<br/><br/>
+
+		<div style="border: 3px solid rgb(42,79,118);  height: 500px; width: 400px; margin-left: calc((100% - 1300px) / 2); text-align:center;  display: inline-block;color: rgb(42,79,118); cursor: pointer;" class="takeAction takeAction1">
+			<div style="display: inline-block; margin-top: 25px; ">
+					<div class ="linkTile linkTile1" style="background-image: url(people.svg);background-size: contain; background-repeat: no-repeat; height: 120px; position: relative; left: calc((100% - 210px) / 2); width: 238px" ></div><br/><div style="font-size: 25px;">Join our Movement<br/></div><div class="divider1" style="width:60%; margin-top: 5px;background-image: url(divider.svg);background-size: contain; background-repeat: no-repeat; height: 48px; position: relative; left: 20%;"></div><div style="margin: 15px;">It takes more than money to run a campaign. Phil is commited to ending corruption and working to imporve the environment, healthcare, and economic prospects. </div></div>
+			<div style="position: relative; top: 50px; font-size: 23px; font-weight: bold;width: 400px; text-align: center; margin-left: -20px; ">Sign Up to Volunteer</div> <div class="arrow1" style="width: 100; height: 75px; position: relative;  left: 290px; background-image: url(left-grey-arrow.svg);background-size: contain; background-repeat: no-repeat; "></div>
 		</div>
-	
+
+		<div style="border: 3px solid rgb(42,79,118);  height: 500px; width: 400px; margin-left: 50px; text-align:center;  display: inline-block;color: rgb(42,79,118); cursor: pointer;" class="takeAction takeAction2">
+				<div style="display: inline-block; margin-top: 25px; ">
+						<div class ="linkTile linkTile2" style="background-image: url(sign.svg);background-size: contain; background-repeat: no-repeat; height: 120px; position: relative; left: calc((100% - 110px) / 2); width: 120px" ></div><br/><div style="font-size: 25px;">Sign the Petition<br/></div><div class="divider1" style="width:60%; margin-top: 5px;background-image: url(divider.svg);background-size: contain; background-repeat: no-repeat; height: 48px; position: relative; left: 20%;"></div><div style="margin: 15px;">It takes more than money to run a campaign. Phil is commited to ending corruption and working to imporve the environment, healthcare, and economic prospects. </div></div>
+				<div style="position: relative; top: 50px; font-size: 23px; font-weight: bold;width: 400px; text-align: center; margin-left: -20px; ">Print & Mail Petition</div> <div class="arrow1" style="width: 100; height: 75px; position: relative;  left: 290px; background-image: url(left-grey-arrow.svg);background-size: contain; background-repeat: no-repeat; "></div>
+			</div>
+		
+
+		<div onclick="window.open('https://registertovoteflorida.gov/','_blank')" style="border: 3px solid rgb(42,79,118);  height: 500px; width: 400px; margin-left: 50px; text-align:center;  display: inline-block;color: rgb(42,79,118); cursor: pointer;" class="takeAction takeAction3">
+				<div style="display: inline-block; margin-top: 25px; ">
+						<div class ="linkTile linkTile3" style="background-image: url(vote.svg);background-size: contain; background-repeat: no-repeat; height: 120px; position: relative; left: calc((100% - 110px) / 2); width: 120px" ></div><br/><div style="font-size: 25px;">Register to Vote<br/></div><div class="divider1" style="width:60%; margin-top: 5px;background-image: url(divider.svg);background-size: contain; background-repeat: no-repeat; height: 48px; position: relative; left: 20%;"></div><div style="margin: 15px;">The first step to taking back our democracy begins with voting. To fight back against voter suppersion, check now to ensure your registration is up to date or register as a new voter.</div></div>
+				<div style="position: relative; top: 50px; font-size: 23px; font-weight: bold;width: 400px; text-align: center; margin-left: -20px; ">Check Registration</div> <div class="arrow1" style="width: 100; height: 75px; position: relative;  left: 290px; background-image: url(left-grey-arrow.svg);background-size: contain; background-repeat: no-repeat; "></div>
+			</div>
+
+	<br/>
 	<br/>
 </main>
+<br/><br/>
 <footer >
 <div style="width: 100%; text-align: center; font-size: 30px; color: rgb(42,79,118); position: static;  font-family: Verdana, Geneva, sans-serif;margin-bottom: 20px">Contribute</div>
 
 
 
 <div style="text-align: center;margin-left: 10px;">
-	<div class="donateMiniButton" style=" display: inline-block;">$2</div>
-	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;">$5</div>
-		<div class="donateMiniButton" style=" display: inline-block;margin-left: 10px;">$10</div>
-	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;">$15</div>
-	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;">$25</div>
-	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;">$50</div>
+	<div class="donateMiniButton" style=" display: inline-block;" onclick="window.open('https://secure.actblue.com/donate/phildoddsfl03?amount=2','_blank')" >$2</div>
+	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;" onclick="window.open('https://secure.actblue.com/donate/phildoddsfl03?amount=5','_blank')">$5</div>
+	<div class="donateMiniButton" style=" display: inline-block;margin-left: 10px;" onclick="window.open('https://secure.actblue.com/donate/phildoddsfl03?amount=10','_blank')">$10</div>
+	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;" onclick="window.open('https://secure.actblue.com/donate/phildoddsfl03?amount=15','_blank')">$15</div>
+	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;" onclick="window.open('https://secure.actblue.com/donate/phildoddsfl03?amount=25','_blank')">$25</div>
+	<div class="donateMiniButton" style="margin-left: 10px; display: inline-block;" onclick="window.open('https://secure.actblue.com/donate/phildoddsfl03?amount=50','_blank')">$50</div>
 </div>
 
 <br/>
