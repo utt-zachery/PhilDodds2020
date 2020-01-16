@@ -1,5 +1,7 @@
 <head>
-
+	<link rel="icon" 
+	type="image/png" 
+	href="favicon.png">
 <style>
 	
 		.accordion {
@@ -72,7 +74,7 @@
 	.headerLink {
 	margin-left: 30px;
    color:white !important;
-  text-decoration: none;	
+  text-decoration: none !important;	
 }
 
 	.joinButtonNew {
@@ -120,6 +122,21 @@ font-size: 22px;
 		 transition: 0.2s ease-in;
 }
 
+.purchase {
+font-size: 22px; 
+	display:inline-block;
+	cursor: pointer;
+   color:  white !important;
+  text-decoration: none;	
+		padding-left: 38px;
+		padding-right: 38px;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		background-color: rgb(4,68,118);
+		 transition: 0.2s ease-in;
+}
+
+
 .donateMiniButton {
 	font-size: 14px; 
 	display:inline-block;
@@ -163,7 +180,7 @@ div.tile2 {
 
 div.tile1 {
   z-index: -10;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) , rgba(255, 255, 255, 0) 30%),url("phil-mobile.png");
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) , rgba(255, 255, 255, 0) 30%),url("Phil01.png");
     
     background-position: 40% 35%;
 }
@@ -534,7 +551,7 @@ p {
 
 <a target="_blank" class="headerLink"  style='font-size: 24px;  display:inline-block;'>The<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Vision</a>
 
-<a target="_blank" class="headerLink"  style='font-size: 24px;  display:inline-block;'>Take<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Action</a>
+<a href="take-action.html" class="headerLink"  style='font-size: 24px;  display:inline-block; '>Take<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Action</a>
 
 <a target="_blank" class="headerLink mover"  style='font-size: 24px;  display:inline-block;'>En<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Espanol <img src="Tilde-white.svg" class="tilde" style="position: relative; right: 26px; bottom: 9px;" width="10"></img></a>
 
@@ -944,7 +961,7 @@ console.log($(document).scrollTop());
 	</div>
 
 
-<div style="text-align: center; font-size: 30px; padding-top: 20px; color: rgb(42,79,118); display: inline-block; width: 100%; margin-bottom:25px">Get Involved</div>
+<div style="text-align: center; font-size: 30px; padding-top: 30px; color: rgb(42,79,118); display: inline-block; width: 100%; margin-bottom:30px">Get Involved</div>
 
 <br/>
 
@@ -992,7 +1009,27 @@ console.log($(document).scrollTop());
 <div style= "background-color: #f1f1f1">
 <div style="text-align: center; font-size: 30px; padding-top: 20px; color: rgb(42,79,118); display: inline-block; width: 100%; margin-bottom:25px">Shop</div>
 <br/><br/>
-<img src="shirt.png" style="margin-left: 10%"></img><br/><div class="learnMore" style="margin-left: calc(10% + 100px);; margin-top: 20px;">Purchase</div>
+
+<div style="width: 100%">
+	<div style="display: inline-block; margin-left: calc((90% - 1130px) / 2 )" >
+		<img src="shirt.png" style="height: 300px;" ></img><br/><br/>
+		<div class="purchase" style="margin-left: calc(47px);; margin-top: 10px; background-color: rgb(21, 117, 58)">Shop Shirts</div>
+	</div>
+
+	<div style="display: inline-block; margin-left: calc(5% + 60px)" >
+		<img src="yard.png" style="margin-left: 00px; height: 290px" ></img><br/><br/>
+		<div class="purchase" style="margin-left: calc(100px);; margin-top: 10px; background-color: rgb(21, 117, 58)">Shop Yard Signs</div>
+	</div>
+
+	<div style="display: inline-block;margin-left: calc(5% + 60px)" >
+		<img src="mug.png" style=" height: 300px" ></img><br/><br/>
+		<div class="purchase" style="margin-left: calc(90px); margin-top: 10px; background-color: rgb(21, 117, 58)">Shop Mugs</div>
+	</div>
+
+
+	<br/><br/><br/>
+</div>
+
 </div>
 </div>
 </body>
