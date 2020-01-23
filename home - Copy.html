@@ -226,18 +226,47 @@ img.logOverlay {
     display: block;
     position: absolute; 
 	left: calc((25% - 120px) - ((400px - 250px) / 2)); 
-	bottom: calc(((100% - 180px) / 2)); 
+	bottom: calc((100% - 240px) / 2); 
 	width:400px;
   }
   
-  div.teamText {
-	display: block;
-    position: absolute; 
-	left: calc((25% - 120px) - ((469px - 250px) / 2)); 
-	bottom: calc(((100% - 320px) / 2)); 
+
+	
+@media only screen and (max-width: 1300px) 
+	{
+		img.logOverlay {
+				left: calc((25% - 120px) - ((30% - 250px) / 2)); 
+				width:30%;
+				top: calc((20% - 15px) + (((100vh - 140px) - (30vw * 0.74213679245)) - (40vh - 45px)) / 2);
+			}
+			 div.tile1 {
+			 background-position: 40% 40%;
+			 
+			
+		  }
+		  
+		  div.tile2 {
+			 background-position: 40% 80%;
+		  }
+	}
+  
+  
+  @media only screen and (max-width: 1010px) {
+		 div.tile3,div.tile1 {
+			 background-position: 50% 40%;
+		  }
+	  .ribbonContainer{
+		  display: none !important;
+	  }
+		  img.logOverlay {
+			top: calc(51.4285714287% / 2);
+			left: calc((25% - 150px) - ((30% - 250px) / 2)); 
+			}
+		  .joinbutton, .donatebutton{
+		   left:calc(25% - 150px);
+		  }
+  
   }
-
-
   
    @media only screen and (max-width: 765px) 
    {
@@ -251,6 +280,53 @@ img.logOverlay {
    }
 	
 	
+   @media only screen and (max-width: 600px) 
+   {
+ 
+		  .joinbutton,img.logOverlay, .donatebutton{
+			display:none;
+		  }
+			  div.tile1,div.tile2 {
+				background-position: 80% 40%;
+				}
+		  }
+
+@media (min-aspect-ratio: 12/8) {
+	.ribbonContainer {
+		position: absolute;
+		top:  calc(80% - 60px) !important;
+	}
+	
+.joinbutton {
+	  bottom: calc(4% + 65px);
+	}
+	
+.donatebutton {
+	 bottom: calc(4% + 5px);
+	}
+	
+	
+}
+	
+	 @media only screen and (max-height: 680px) 
+   {
+ 		 div.tile3,div.tile2, div.tile1 {
+			 height: 680px !important;
+		  }
+	   
+	   .logOverlay {
+		   top: calc(95px + ((451px - (30vw * 0.74213679245)) / 2)) !important;
+	   }
+	   
+	}
+	
+	 @media only screen and (max-height: 680px) and (min-width: 1300px)
+   {
+	   .logOverlay {
+		   top: calc(95px + ((451px - (400px * 0.74213679245)) / 2)) !important;
+	   }
+	}
+
 	@media only screen and (max-width: 690px) 
    {
 	   .textSpacer {
@@ -301,7 +377,7 @@ img.logOverlay {
 	
 	.ribbonContainer{
 		 display: none;
-		top: calc(80% - 60px);
+		top: calc(20% - 60px);
 	}
 	
 	.ribbonText {
@@ -503,7 +579,6 @@ p {
 
 
 							<img src="logo-white.svg" alt="logo"  class="logOverlay"  ></img>
-							<div class="teamText" style="color: white; font-size: 40px; text-shadow: 4px 4px 4px black;" >Strong Electable Democrat</div>
 							
 
 							<div style="background-color: rgba(255,255,255,0.25); position: relative; top: 80%; left: 5%; padding: 30px; width: 40%; z-index: 100" onclick="event.stopPropagation();">
@@ -587,7 +662,7 @@ p {
 	
 	//Main Timer function
 	
-	//var carouselEngine = setInterval(mainTimer, 6000);
+	var carouselEngine = setInterval(mainTimer, 6000);
 	// Restart Engine
 	function mainTimer() {
   		$("#carouselExampleIndicators").carousel('next');
@@ -998,7 +1073,7 @@ console.log($(document).scrollTop());
 		
 			<img src="logo-white.svg" class="footer-logo" style="position: relative; top: 25px; padding-left: 60px; "></img>
 			<img src="grad1.png"  class="footer-gradient" style="position: absolute; right:0px; height: 250px"></img>
-			<div style="width: 100%; text-align: center;  font-size: 32px; position: relative; bottom:195px;  font-family: headerFont">Stay<div class="textSpacer" style="width: 6px; display:inline-block;"></div>in<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Touch</div>
+			<div style="width: 100%; text-align: center;  font-size: 32px; position: relative; bottom:185px;  font-family: headerFont">Stay<div class="textSpacer" style="width: 6px; display:inline-block;"></div>in<div class="textSpacer" style="width: 6px; display:inline-block;"></div>Touch</div>
 	
 	</div>
 </footer>
